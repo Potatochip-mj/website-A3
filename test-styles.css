@@ -1,0 +1,28 @@
+/*import url for Inter typeface*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Tilt+Neon&display=swap'); 
+
+.cluster{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items:center;
+    flex-direction: row;
+}
+
+.cluster > *{
+    margin: 0.5rem; /*this adds a bit of space around elements*/
+}
+
+.nav-btn{
+    font-family: "Inter";
+    text-transform: capitalize; /*not sure why this isn't working ;-; maybe this google font import doesn't support capitalisation*/
+}
+
+.bg-image{
+    opacity: 0.5; /*sets opacity of any bg images at 50%*/
+}
+
+.home-btn{
+    background-color: #1D1D1D;
+    color: #FFFFFF;
+}
