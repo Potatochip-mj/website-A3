@@ -1,6 +1,8 @@
 /*import url for Inter typeface*/
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Tilt+Neon&display=swap'); 
 
+/*this is the CSS page for all the styling across the website*/
+
 .cluster{
     display: flex;
     flex-wrap: wrap;
