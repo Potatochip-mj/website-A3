@@ -13,6 +13,8 @@
     margin: 0.5rem; /*this adds a bit of space around elements*/
 }
 
+hello
+
 .nav-btn{
     font-family: "Inter";
     text-transform: capitalize; /*not sure why this isn't working ;-; maybe this google font import doesn't support capitalisation*/
