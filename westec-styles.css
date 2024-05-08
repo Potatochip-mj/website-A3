@@ -1,6 +1,6 @@
 /* This is the CSS file for the entire Westec website */
 
-/*import url for Inter typeface*/
+/*import url for Inter adn Tilt Neon typeface*/
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Tilt+Neon&display=swap'); 
 
 .cluster{
@@ -15,8 +15,47 @@
     margin: 0.5rem; /*this adds a bit of space around elements*/
 }
 
+/*typeface, fonts, size and styles*/
 h1{
     font-family: "Tilt Neon";
+    font-size: 47.8px;
+}
+
+h2{
+    font-family: "Inter";
+    font-size: 39.8px;
+    font-weight: 300;
+}
+
+h3{
+    font-family: "Inter";
+    font-size: 33.2px;
+    font-weight: 300;
+}
+
+.product-name{
+    font-family: "Inter";
+    font-size: 23px;
+    font-weight:bold;
+}
+
+.product-price{
+    font-family: "Inter";
+    font-size: 19.2px;
+    font-weight: 300;
+    font-style: italic;
+}
+
+p{
+    font-family: "Inter";
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.p-italics{
+    font-family: "Inter";
+    font-size: 16px;
+    font-style: italic;
 }
 
 /*nav styling*/
