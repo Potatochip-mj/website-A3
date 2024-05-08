@@ -59,11 +59,33 @@ p{  /*this one is for normal text*/
 }
 
 /*button styling*/
+.btn{
+    font-family: "Inter";
+    font-size: 19.2px;
+    font-weight: 300;
+    /*width: 138px;
+    height: 40px; not sure if this works rn*/
+    color: white;
+    border-radius: 1rem;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+}
+
+.btn-primary{
+    background-color: #9A15EC;
+    color: white;
+}
+
+.btn-accent{
+    background-color: white;
+    color: #1D1D1D;
+    outline-style: solid;
+    outline-color: #1D1D1D;
+}
 
 /*nav styling*/
 .nav-btn{
     font-family: "Inter";
-    text-transform: capitalize; /*not sure why this isn't working ;-; maybe this google font import doesn't support capitalisation*/
     text-decoration: none;
 }
 
@@ -75,4 +97,25 @@ p{  /*this one is for normal text*/
 .home-btn{
     background-color: #1D1D1D;
     color: #FFFFFF;
+}
+
+.home-btn-accent{
+    outline-style: solid;
+    outline-color: #FFFFFF;
+}
+
+
+/*product page styling*/
+.product-details-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.product-img{
+    max-width: 600px;
+}
+
+.product-details{ /*might need to do a grid so the different sections can overalp slightly*/
+
 }
