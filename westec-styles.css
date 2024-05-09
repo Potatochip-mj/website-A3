@@ -100,23 +100,31 @@ p{  /*this one is for normal text*/
 }
 
 /*NAV styling*/
-.nav-btn{
+.nav-btn{ /*currently makes the nav text buttons look nice, will update and remove later*/
     font-family: "Inter";
     text-decoration: none;
-}
+} 
 
 /*FOOTER styling*/
 footer{
     display: flex;
+    flex-direction: row;
     height: 180px;
     background-color: #1D1D1D;
     color:#FFFFFF;
+    justify-content: space-around;
 }
 
 .footer-item-2{
     text-decoration: none;
     font-family: "Inter";
+    line-height: 20px;
 }
+
+.address{
+    /*make text wrap here for business address??*/
+}
+
 
 /*HOME PAGE styling*/
 .landing-page{ /*might need to do a grid so the different sections can overlap slightly*/
