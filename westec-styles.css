@@ -80,7 +80,7 @@ p{  /*this one is for normal text*/
     /*width: 138px;
     height: 40px; not sure if this works rn*/
     color: white;
-    border-radius: 1rem;
+    border-radius: 0.7rem;
     padding: 10px 20px 10px 20px;
     text-decoration: none;
 }
