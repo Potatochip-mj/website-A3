@@ -81,6 +81,8 @@ p{  /*this one is for normal text*/
     color: #1D1D1D;
     outline-style: solid;
     outline-color: #1D1D1D;
+    outline-width: 2px;
+    padding: 10px 50px 10px 50px;
 }
 
 /*nav styling*/
@@ -90,6 +92,10 @@ p{  /*this one is for normal text*/
 }
 
 /*home page styling*/
+.landing-page{
+    /*use this to style the container for the landing page items*/
+}
+
 .bg-image{
     opacity: 0.5; /*sets opacity of any bg images at 50%*/
 }
@@ -116,6 +122,19 @@ p{  /*this one is for normal text*/
     max-width: 600px;
 }
 
-.product-details{ /*might need to do a grid so the different sections can overalp slightly*/
+.product-details{ /*might need to do a grid so the different sections can overlap slightly*/
+    display: flex;
+    height: 200px;
+    flex-direction: column;
+}
 
+.product-name-price{
+    line-height: 10px;
+}
+
+.product-btns{ /*need to make these stack on top of each other*/
+    display: flex;
+    height: 100px;
+    flex-direction: column;
+    align-content: space-between;
 }
