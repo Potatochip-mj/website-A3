@@ -37,6 +37,7 @@ h3{
     font-family: "Inter";
     font-size: 23px;
     font-weight:bold;
+    line-height: 10px;
 }
 
 .product-price{
@@ -193,11 +194,15 @@ footer{
 .center-heading{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+}
+
+.cart-heading{
+    align-self: center;
 }
 
 .page-indicator{
     max-width: 250px;
+    align-self: center;
 }
 
 .cart-items{
@@ -208,4 +213,9 @@ footer{
 
 .cart-img{
     max-width: 200px;
+}
+
+.cart-item-1{
+    /*need to alter the spacing between elements*/
+    background-color: aquamarine;
 }
