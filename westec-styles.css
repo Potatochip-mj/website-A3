@@ -101,13 +101,14 @@ p{  /*this one is for normal text*/
 
 /*Overall styling for the page*/
 body{
-    align-content: space-between;
+    gap: 2em; /*idk if this works rn*/
 }
 
 /*NAV styling*/
-.nav-btn{ /*currently makes the nav text buttons look nice, will update and remove later*/
+.nav-btn{
     font-family: "Inter";
     text-decoration: none;
+    
 } 
 
 /*FOOTER styling*/
@@ -186,4 +187,25 @@ footer{
 
 .product-btns > .btn-accent{
     /*need to move this button downwards, or create space btween the buttons*/
+}
+
+/*SHOPPING CART styling*/
+.center-heading{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.page-indicator{
+    max-width: 250px;
+}
+
+.cart-items{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.cart-img{
+    max-width: 200px;
 }
