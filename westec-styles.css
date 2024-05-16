@@ -206,9 +206,10 @@ footer{
 }
 
 .cart-items{
-    display: grid;
+    /*display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr; grid version*/
+    display: flex;
 }
 
 .cart-img{
@@ -217,7 +218,8 @@ footer{
 
 .cart-item-1{
     /*need to alter the spacing between elements*/
-    background-color: aquamarine;
+    margin: 0.5rem;
+    background-color: aquamarine; /*this is just for layout purposes, remove when done*/
     display: grid;
     width: 430px;
     height: 210px;
@@ -232,4 +234,20 @@ footer{
 
 .cart-item-1 > .product-name{
     /*need to make the text not jumbled up!*/
+}
+
+.cart-item-2{
+    /*need to alter the spacing between elements*/
+    margin: 0.5rem;
+    background-color: pink; /*this is just for layout purposes, remove when done*/
+    display: grid;
+    width: 430px;
+    height: 210px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.cart-item-2 > .product-name-price{
+    grid-column: 2;
+    align-self: self-start;
 }
