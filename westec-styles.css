@@ -206,10 +206,10 @@ footer{
 }
 
 .cart-items{
-    /*display: grid;
+    display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr; grid version*/
-    display: flex;
+    grid-template-rows: 1fr 1fr 1fr;
+    width: 60%;
 }
 
 .cart-img{
@@ -250,4 +250,16 @@ footer{
 .cart-item-2 > .product-name-price{
     grid-column: 2;
     align-self: self-start;
+}
+
+.cart-summary{
+    width: 28.125rem;
+    height: 42.5rem;
+    background-color: #1D1D1D;
+    border-top-left-radius: 0.7rem;
+    border-top-right-radius: 0.7rem;
+}
+
+.cart-summary-text{
+    color:#FFFFFF;
 }
