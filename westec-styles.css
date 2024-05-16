@@ -109,14 +109,13 @@ body{
 .nav-btn{
     font-family: "Inter";
     text-decoration: none;
-    
 } 
 
 /*FOOTER styling*/
 footer{
     display: flex;
     flex-direction: row;
-    height: 180px;
+    height: auto;
     width: auto;
     background-color: #1D1D1D;
     color:#FFFFFF;
@@ -187,7 +186,8 @@ footer{
 }
 
 .product-btns > .btn-accent{
-    /*need to move this button downwards, or create space btween the buttons*/
+    margin: 15px;
+    /*need to make this button move to the right and align under the primary button*/
 }
 
 /*SHOPPING CART styling*/
@@ -218,4 +218,18 @@ footer{
 .cart-item-1{
     /*need to alter the spacing between elements*/
     background-color: aquamarine;
+    display: grid;
+    width: 430px;
+    height: 210px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.cart-item-1 > .product-name-price{
+    grid-column: 2;
+    align-self: self-start;
+}
+
+.cart-item-1 > .product-name{
+    /*need to make the text not jumbled up!*/
 }
