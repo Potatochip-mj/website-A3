@@ -1,13 +1,13 @@
 /* This is the CSS file for the entire Westec website! */
 
-/*import url for Inter adn Tilt Neon typeface*/
+/*import url for Inter and Tilt Neon typeface*/
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Tilt+Neon&display=swap'); 
 
 .cluster{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items:center;
+    align-items: center;
     flex-direction: row;
 }
 
@@ -31,13 +31,13 @@ h3{
     font-family: "Inter";
     font-size: 33.2px;
     font-weight: 300;
+    margin: 0;
 }
 
 .product-name{
     font-family: "Inter";
     font-size: 23px;
-    font-weight:bold;
-    line-height: 10px;
+    font-weight: bold;
 }
 
 .product-price{
@@ -78,12 +78,14 @@ p{  /*this one is for normal text*/
     font-family: "Inter";
     font-size: 19.2px;
     font-weight: 300;
-    /*width: 138px;
-    height: 40px; not sure if this works rn*/
+    width: 138px;
+    height: 25px;
     color: white;
     border-radius: 0.7rem;
     padding: 0.625rem 1.25rem 0.625rem 1.25rem;
     text-decoration: none;
+    text-align: center;
+    vertical-align: middle;
 }
 
 .btn-primary{
@@ -91,24 +93,42 @@ p{  /*this one is for normal text*/
     color: white;
 }
 
-.btn-accent{
+.btn-accent-1{
     background-color: white;
     color: #1D1D1D;
     outline-style: solid;
     outline-color: #1D1D1D;
     outline-width: 2px;
-    padding: 0.625rem 3.125rem 0.625rem 3.125rem;
+}
+
+.btn-accent-2{
+    /*will update this soon*/
 }
 
 /*Overall styling for the page*/
 body{
-    gap: 2em; /*idk if this works rn*/
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
 /*NAV styling*/
+.nav-bar{
+    height: 50px;
+    margin: 0.5rem;
+    align-items: flex-start;
+}
+
+.nav-buttons{
+    height: 50px;
+    align-items: flex-start;
+}
+
 .nav-btn{
     font-family: "Inter";
+    color:#6F118A;
     text-decoration: none;
+    align-self: flex-start;
 } 
 
 /*FOOTER styling*/
@@ -119,7 +139,7 @@ footer{
     width: auto;
     background-color: #1D1D1D;
     color:#FFFFFF;
-    
+    justify-content: space-around; /*?????*/
 }
 
 .footer-item-2{
@@ -175,7 +195,7 @@ footer{
 }
 
 .product-name-price{
-    line-height: 10px;
+    line-height: 20px;
 }
 
 .product-btns{ /*need to make these stack on top of each other*/
@@ -206,30 +226,34 @@ footer{
 }
 
 .cart-items{
-    display: grid;
+    /*display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr; */
+    display: flex;
+    flex-direction: column;
     width: 60%;
 }
 
 .cart-img{
     max-width: 12.5rem;
+    max-height: 12.5rem;
+    border-radius: 0.7rem;
 }
 
 .cart-item-1{
-    /*need to alter the spacing between elements*/
+    
     margin: 0.5rem;
     background-color: aquamarine; /*this is just for layout purposes, remove when done*/
-    display: grid;
+    display: flex;
     width: 26.875rem;
-    height: 13.125rem;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    height: 12.5rem;
+    /*grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr; */
 }
 
 .cart-item-1 > .product-name-price{
-    grid-column: 2;
     align-self: self-start;
+    padding: 0.5rem;
 }
 
 .cart-item-1 > .product-name{
@@ -237,24 +261,23 @@ footer{
 }
 
 .cart-item-2{
-    /*need to alter the spacing between elements*/
     margin: 0.5rem;
     background-color: pink; /*this is just for layout purposes, remove when done*/
-    display: grid;
+    display: flex;
     width: 26.875rem;
-    height: 13.125rem;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    height: 12.5rem;
+    /*grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr; */
 }
 
 .cart-item-2 > .product-name-price{
-    grid-column: 2;
     align-self: self-start;
+    padding: 0.5rem;
 }
 
 .cart-summary{
     width: 28.125rem;
-    height: 42.5rem;
+    height: 37.5rem;
     background-color: #1D1D1D;
     border-top-left-radius: 0.7rem;
     border-top-right-radius: 0.7rem;
@@ -262,4 +285,12 @@ footer{
 
 .cart-summary-text{
     color:#FFFFFF;
+    margin: 2rem;
 }
+
+.summary-btns{
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+}
+
