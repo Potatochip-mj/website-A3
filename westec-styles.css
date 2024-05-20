@@ -103,7 +103,11 @@ p{  /*this one is for normal text*/
 }
 
 .btn-accent-2{
-    /*will update this soon*/
+    background-color: transparent;
+    color: white;
+    outline-style: solid;
+    outline-color: white;
+    outline-width: 2px;
 }
 
 /*Overall styling for the page*/
