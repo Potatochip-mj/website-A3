@@ -142,6 +142,10 @@ footer{
     justify-content: space-around; /*?????*/
 }
 
+.footer-items{
+    /*need to make all footer items evenly spaced*/
+}
+
 .footer-item-2{
     text-decoration: none;
     font-family: "Inter";
@@ -181,6 +185,7 @@ footer{
 .product-details-container{
     display: flex;
     flex-direction: row;
+    
     justify-content: space-around;
 }
 
