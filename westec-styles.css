@@ -149,6 +149,7 @@ body{
     color:#6F118A;
     text-decoration: none;
     align-self: flex-start;
+    margin: 0 1rem;
 } 
 
 
@@ -165,7 +166,6 @@ footer{
 }
 
 .footer-items{
-    /*idk wth happening here, will fix later*/
     width: 1368px;
     justify-content: space-evenly;
     margin: 0.5rem 0 0.5rem 0;
@@ -242,14 +242,15 @@ footer{
     
 }
 
+
 /*SHOPPING CART styling*/
-.center-heading{
+.page-heading{
     display: flex;
     flex-direction: column;
     height: 100px;
 }
 
-.cart-heading{
+.center-heading{
     align-self: center;
 }
 
@@ -341,3 +342,6 @@ footer{
 .summary-btns > .btn-primary{
     margin: 1rem 0 1rem 0;
 }
+
+
+/*CONFIRMATION PAGE styling*/
