@@ -229,22 +229,45 @@ footer{
     background-color: chartreuse;
 }
 
+.banner-buttons > :nth-last-child(1){
+    margin-right: auto;
+}
+
+.banner-buttons > :nth-child(1){
+    margin-left: auto;
+}
+
 .banner-buttons{
     height: 10rem;
+    background-color: darkcyan;
 }
 
-.banner-buttons > a{
+.banner-stats{
+    display: grid;
+    height: 17rem;
+    background-color: darkkhaki;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "statistic-1 statistic-2 statistic-3";
+}
+
+.statistic-1{
+    margin-top: 35%;
+    margin-left: 70%;
+    grid-area: statistic-1;
+}
+
+.statistic-2{
+    margin-top: 35%;
+    margin-left: auto;
     margin-right: auto;
-    padding: 0.5rem;
+    grid-area: statistic-2;
 }
 
-.banner-buttons{
-    height: 10rem;
-}
-
-.banner-buttons > a{
-    margin-right: auto;
-    padding: 0.5rem;
+.statistic-3{
+    margin-top: 35%;
+    margin-right: 70%;
+    grid-area: statistic-3;
 }
 
 .btn--home{
