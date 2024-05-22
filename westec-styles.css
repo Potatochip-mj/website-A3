@@ -35,13 +35,13 @@ h3{
     margin: 0;
 }
 
-.product-name{
+.product-details--name{
     font-family: "Inter";
     font-size: 23px;
     font-weight: bold;
 }
 
-.product-price{
+.product-details--price{
     font-family: "Inter";
     font-size: 19.2px;
     font-weight: 300;
@@ -89,12 +89,12 @@ p{  /*this one is for normal text*/
     vertical-align: middle;
 }
 
-.btn-primary{
+.btn--primary{
     background-color: #9A15EC;
     color: white;
 }
 
-.btn-accent-1{
+.btn--accent-1{
     background-color: white;
     color: #1D1D1D;
     outline-style: solid;
@@ -102,7 +102,7 @@ p{  /*this one is for normal text*/
     outline-width: 2px;
 }
 
-.btn-accent-2{
+.btn--accent-2{
     background-color: transparent;
     color: white;
     outline-style: solid;
@@ -185,20 +185,20 @@ footer{
     align-self: baseline;
 }
 
-.footer-items{
+.footer__items{
     width: 1368px;
     justify-content: space-evenly;
     margin: 0.5rem 0 0.5rem 0;
 }
 
-.footer-item-2{
+.footer__item-2{
     text-decoration: none;
     font-family: "Inter";
     line-height: 10px;
     
 }
 
-.footer-item-3{
+.footer__item-3{
    line-height: 20px;
    height: 135px;
 }
@@ -209,7 +209,7 @@ footer{
 
 
 /*HOME PAGE styling*/
-.landing-page{ /*might need to do a grid so the different sections can overlap slightly*/
+.landing-page{ 
     /*use this to style the container for the landing page items*/
     position: relative;
     background-color: #1D1D1D;
@@ -217,7 +217,7 @@ footer{
     overflow: hidden;
 }
 
-.bg-image{
+.landing-page--img{
     position: absolute;
     top: 0;
     left: 0;
@@ -240,47 +240,47 @@ footer{
     background-color: chartreuse;
 }
 
-.home-btn{
+.btn--home{
     background-color: #1D1D1D;
     color: #FFFFFF;
 }
 
-.home-btn-accent{
+.btn--home-accent{
     outline-style: solid;
     outline-color: #FFFFFF;
 }
 
 
 /*PRODUCT PAGE styling*/
-.product-details-container{
+.product-container{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 }
 
-.product-img{
+.product-container__img{
     max-width: 500px;
     max-height: 500px;
 }
 
-.product-details{ /*might need to do a grid so the different sections can overlap slightly*/
+.product-container__details{ /*might need to do a grid so the different sections can overlap slightly*/
     display: flex;
     height: 200px;
     flex-direction: column;
 }
 
-.product-name-price{
+.product-details{
     line-height: 20px;
 }
 
-.product-btns{ /*need to make these stack on top of each other*/
+.product-container__btns{ /*need to make these stack on top of each other*/
     display: flex;
     height: 150px;
     flex-direction: column;
     align-items: flex-end;
 }
 
-.product-btns > .btn-accent-1{
+.product-container__btns > .btn--accent-1{
     margin: 0.938rem 0 0.938rem 0;
     
 }
@@ -303,14 +303,14 @@ footer{
     margin: 1rem;
 }
 
-.cart-items{
+.cart__items{
     display: flex;
     flex-direction: column;
     width: 60%;
     align-self: flex-start;
 }
 
-.cart-img{
+.cart-item--img{
     max-width: 12.5rem;
     max-height: 12.5rem;
     border-radius: 1rem;
@@ -321,7 +321,7 @@ footer{
     height: 12.5rem;
 }
 
-.cart-item-1{
+.cart-item--1{
     margin: 0 1rem 1.5rem 1rem;
     background-color: aquamarine; /*this is just for layout purposes, remove when done*/
     display: flex;
@@ -329,12 +329,12 @@ footer{
     height: 12.5rem;
 }
 
-.cart-item-1 > .product-name-price{
+.cart-item--1 > .product-details{
     align-self: self-start;
     padding: 0.5rem;
 }
 
-.cart-item-2{
+.cart-item--2{
     margin: 0 1rem 1.5rem 1rem;
     background-color: pink; /*this is just for layout purposes, remove when done*/
     display: flex;
@@ -342,12 +342,12 @@ footer{
     height: 12.5rem;
 }
 
-.cart-item-2 > .product-name-price{
+.cart-item--2 > .product-details{
     align-self: self-start;
     padding: 0.5rem;
 }
 
-.cart-item-3{
+.cart-item--3{
     margin: 0 1rem 1.5rem 1rem;
     background-color: lightblue; /*this is just for layout purposes, remove when done*/
     display: flex;
@@ -355,13 +355,13 @@ footer{
     height: 12.5rem;
 }
 
-.cart-item-3 > .product-name-price{
+.cart-item--3 > .product-details{
     align-self: self-start;
     padding: 0.5rem;
 
 }
 
-.cart-summary{
+.cart__cart-summary{
     width: 28.125rem;
     height: 42.5rem;
     background-color: #1D1D1D;
@@ -370,19 +370,19 @@ footer{
     margin: 0;
 }
 
-.cart-summary-text{
+.cart-summary__text{
     color:#FFFFFF;
     margin: 2rem;
 }
 
-.summary-btns{
+.cart-summary__btns{
     display: flex;
     flex-direction: column;
     height: 150px;
     margin: 2rem;
 }
 
-.summary-btns > .btn-primary{
+.cart-summary__btns > .btn--primary{
     margin: 1rem 0 1rem 0;
 }
 
