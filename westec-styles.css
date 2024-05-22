@@ -144,11 +144,11 @@ body{
     position: absolute;
     top: 0;
     z-index: 1;
+    background-color: aquamarine;
 }
 
 .nav-buttons{
     height: 50px;
-    padding-top: 0.5rem;
     align-items: flex-start;
     margin-left: auto;
 }
@@ -158,6 +158,9 @@ body{
 }
 
 .nav-btn{
+    background-color: tomato;
+    display: block;
+    padding-top: 0.5rem;
     font-family: "Inter";
     color:#6F118A;
     text-decoration: none;
@@ -224,6 +227,17 @@ footer{
     filter: saturate(0);
     object-fit: cover;
     z-index: 0;
+}
+
+.slogan{
+    top: 50%;
+    position: absolute;
+    z-index: 1;
+    background-color: burlywood;
+}
+
+.slogan-text{
+    background-color: chartreuse;
 }
 
 .home-btn{
