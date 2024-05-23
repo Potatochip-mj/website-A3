@@ -163,7 +163,7 @@ body{
     background-color: tomato;
     padding-top: 0.5rem;
     font-family: "Inter";
-    color:#6F118A;
+    color:#6F11A8;
     text-decoration: none;
     align-self: flex-start;
     margin: 0 1rem;
@@ -420,7 +420,7 @@ footer{
 
 /*CONFIRMATION PAGE styling*/
 .confirmation-page{
-    background-image: linear-gradient(rgb(255, 255, 255, 0.25), rgb(255, 255, 255, 0.75),rgb(111, 17, 138, 1));
+    background-image: linear-gradient(rgb(255, 255, 255, 0.25), rgb(255, 255, 255, 0.75),#6F11A8);
 }
 
 .confirmation-text{
@@ -434,17 +434,17 @@ footer{
     width: 600px;
     text-align: center;
     align-self: center;
-    color:#6F118A;
+    color:#6F11A8;
 }
 
 .confirmation-text__order-num{
-    color:#6F118A;
+    color:#6F11A8;
     align-self: center;
     margin: 4rem 0 0.5rem 0;
 }
 
 .confirmation-text__order-text{
-    color:#6F118A;
+    color:#6F11A8;
     align-self: center;
     margin: 0 0 1rem 0;
 }
