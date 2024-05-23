@@ -228,6 +228,10 @@ footer{
     text-shadow: 0px 4px 4px black;
 }
 
+.banner-buttons{
+    height: 5rem;
+}
+
 .banner-buttons > :nth-last-child(1){
     margin-right: auto;
 }
@@ -236,12 +240,35 @@ footer{
     margin-left: auto;
 }
 
-.banner-buttons{
-    height: 10rem;
-}
-
 .banner-stats{
     height: 17rem;
+}
+
+.individual-banner-stats{
+    height: 16rem;
+    flex-direction: column;
+}
+
+.banner-stats-images{
+    margin-top: auto;
+    margin-bottom: 0;
+    max-width: 5rem;
+}
+
+.banner-stats-text{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #FFFFFF;
+}
+
+.banner-stats-text--highlight{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0.25rem;
+    font-size: 42px;
+    color: #9A15EC;
 }
 
 .banner-stats > :nth-child(1){
@@ -261,6 +288,7 @@ footer{
     outline-style: solid;
     outline-color: #FFFFFF;
     outline-width: 2px;
+    backdrop-filter: blur(5px);
 }
 
 
