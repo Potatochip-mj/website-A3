@@ -82,8 +82,8 @@ p{  /*this one is for normal text*/
     width: 138px;
     height: 25px;
     color: white;
-    border-radius: 0.7rem;
-    padding: 0.625rem 1.25rem 0.625rem 1.25rem;
+    border-radius: 0.5rem;
+    padding: 0.8rem 1.25rem 0.8rem 1.25rem;
     text-decoration: none;
     text-align: center;
     vertical-align: middle;
@@ -139,10 +139,6 @@ body{
     width: 100%;
 }
 
-.nav-bar--home{
-    top: 0;
-    background-color: aquamarine;
-}
 
 .nav-buttons{
     height: 50px;
@@ -159,7 +155,6 @@ body{
 }
 
 .nav-btn{
-    background-color: tomato;
     padding-top: 0.5rem;
     font-family: "Inter";
     color:#6F11A8;
@@ -170,6 +165,11 @@ body{
 
 .nav-btn--home{
     color: #FFFFFF;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+.nav-logo-home{
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.25));
 }
 
 /*FOOTER styling*/
@@ -219,13 +219,13 @@ footer{
 
 .slogan{
     height: 12.5rem;
-    background-color: burlywood;
 }
 
 .slogan-text{
     margin-left: auto;
     margin-right: auto;
-    background-color: chartreuse;
+    color: #FFFFFF;
+    text-shadow: 0px 4px 4px black;
 }
 
 .banner-buttons > :nth-last-child(1){
@@ -238,35 +238,18 @@ footer{
 
 .banner-buttons{
     height: 10rem;
-    background-color: darkcyan;
 }
 
 .banner-stats{
-    display: grid;
     height: 17rem;
-    background-color: darkkhaki;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: 
-    "statistic-1 statistic-2 statistic-3";
 }
 
-.statistic-1{
-    margin-top: 35%;
-    margin-left: 70%;
-    grid-area: statistic-1;
+.banner-stats > :nth-child(1){
+    margin-left: 20%;
 }
 
-.statistic-2{
-    margin-top: 35%;
-    margin-left: auto;
-    margin-right: auto;
-    grid-area: statistic-2;
-}
-
-.statistic-3{
-    margin-top: 35%;
-    margin-right: 70%;
-    grid-area: statistic-3;
+.banner-stats > :nth-last-child(1){
+    margin-right: 20%;
 }
 
 .btn--home{
@@ -277,6 +260,7 @@ footer{
 .btn--home-accent{
     outline-style: solid;
     outline-color: #FFFFFF;
+    outline-width: 2px;
 }
 
 
