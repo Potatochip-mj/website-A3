@@ -418,3 +418,29 @@ footer{
 
 
 /*CONFIRMATION PAGE styling*/
+.confirmation-text{
+    display: flex;
+    flex-direction: column;
+    height: 700px;
+    justify-content: center;
+}
+
+.confirmation-text__heading{
+    align-self: center;
+}
+
+.confirmation-text__order-num{
+    align-self: center;
+    margin: 4rem 0 0.5rem 0;
+}
+
+.confirmation-text__order-text{
+    align-self: center;
+    margin: 0 0 1rem 0;
+}
+
+.confirmation-text > .btn--primary{
+    align-self: center;
+    width: 185px;
+    margin: 1rem 0 1rem 0;
+}
