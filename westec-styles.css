@@ -398,18 +398,19 @@ footer{
     border-top-left-radius: 1.5rem;
     border-top-right-radius: 1.5rem;
     margin: 0;
+    /* position: fixed; */
 }
 
 .cart-summary__text{
     color:#FFFFFF;
-    margin: 2rem;
+    margin: 4rem;
 }
 
 .cart-summary__btns{
     display: flex;
     flex-direction: column;
     height: 150px;
-    margin: 2rem;
+    margin: 4rem;
 }
 
 .cart-summary__btns > .btn--primary{
@@ -418,6 +419,10 @@ footer{
 
 
 /*CONFIRMATION PAGE styling*/
+.confirmation-page{
+    background-image: linear-gradient(rgb(255, 255, 255, 0.25), rgb(255, 255, 255, 0.75),rgb(111, 17, 138, 1));
+}
+
 .confirmation-text{
     display: flex;
     flex-direction: column;
@@ -426,15 +431,20 @@ footer{
 }
 
 .confirmation-text__heading{
+    width: 600px;
+    text-align: center;
     align-self: center;
+    color:#6F118A;
 }
 
 .confirmation-text__order-num{
+    color:#6F118A;
     align-self: center;
     margin: 4rem 0 0.5rem 0;
 }
 
 .confirmation-text__order-text{
+    color:#6F118A;
     align-self: center;
     margin: 0 0 1rem 0;
 }
