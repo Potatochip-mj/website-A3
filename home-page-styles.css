@@ -107,7 +107,7 @@
     flex-direction: row;
     white-space: nowrap;
     gap: 15rem;
-    animation: scroll 20s linear infinite;
+    animation: scroll 25s linear infinite;
 }
 
 @keyframes scroll{
