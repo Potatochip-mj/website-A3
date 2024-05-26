@@ -109,8 +109,19 @@
 }
 
 .westec-about{
+    flex-direction: column;
     min-height: 85rem;
     background-color: #E1E1E1;
+}
+
+.westec-about-text{
+    flex-direction: column;
+}
+
+.westec-about-image{
+    max-width: 40rem;
+    max-height: 38rem;
+    background-size: cover;
 }
 
 .best-selling{
