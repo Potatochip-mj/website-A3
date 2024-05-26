@@ -98,6 +98,22 @@
     min-height: 9.5vh;
     margin-top: 2px;
     margin-bottom: 2px;
+    overflow: hidden;
+}
+
+.auto-scrolling-bar-inner{
+    width: max-content;
+    display: flex;
+    flex-direction: row;
+    white-space: nowrap;
+    gap: 15rem;
+    animation: scroll 20s linear infinite;
+}
+
+@keyframes scroll{
+    to{
+        transform: translate(calc(-50% - 7.5rem));
+    }
 }
 
 .auto-scrolling-text{
@@ -124,14 +140,13 @@
 
 .westec-about{
     flex-direction: column;
-    min-height: 85rem;
+    min-height: 90rem;
     background-color: #E1E1E1;
+    overflow: hidden;
 }
 
 .westec-about-text{
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 5rem;
+    margin: 5rem auto 0 auto;
     max-width: 50rem;
     flex-direction: column;
 }
@@ -163,10 +178,7 @@
 }
 
 .westec-about-images-text-right{
-    margin-top: 6rem;
-    margin-bottom: auto;
-    margin-right: auto;
-    margin-left: 6rem;
+    margin: 6rem auto auto 6rem;
     max-width: 22.5rem;
     flex-direction: column;
 }
@@ -178,10 +190,7 @@
 }
 
 .westec-about-images-text-left{
-    margin-top: 6rem;
-    margin-bottom: auto;
-    margin-left: auto;
-    margin-right: 6rem;
+    margin: 6rem 6rem auto auto;
     max-width: 22.5rem;
     flex-direction: column;
 }
