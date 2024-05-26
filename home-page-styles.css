@@ -106,6 +106,20 @@
 
 .westec-intro{
     min-height: 45rem;
+    overflow: hidden;
+}
+
+.westec-intro-text{
+    flex-direction: column;
+    max-width: 35rem;
+    margin-left: 1rem;
+    margin-right: auto;
+}
+
+.westec-intro-image{
+    margin-right: 1rem;
+    margin-left: auto;
+    max-width: 35rem;
 }
 
 .westec-about{
@@ -115,13 +129,61 @@
 }
 
 .westec-about-text{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5rem;
+    max-width: 50rem;
     flex-direction: column;
 }
 
-.westec-about-image{
-    max-width: 40rem;
-    max-height: 38rem;
-    background-size: cover;
+.westec-about-selling{
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+.h3--bold{
+    font-style: bold;
+    font-weight: 450;
+}
+
+.h3--bold-right-aligned{
+    font-style: bold;
+    font-weight: 450;
+    text-align: right;
+}
+
+.p--right-aligned{
+    text-align: right;
+}
+
+.westec-about-images-right{
+    min-width: 20rem;
+    max-width: 20rem;
+    margin-right: auto;
+}
+
+.westec-about-images-text-right{
+    margin-top: 6rem;
+    margin-bottom: auto;
+    margin-right: auto;
+    margin-left: 6rem;
+    max-width: 22.5rem;
+    flex-direction: column;
+}
+
+.westec-about-images-left{
+    min-width: 20rem;
+    max-width: 20rem;
+    margin-left: auto;
+}
+
+.westec-about-images-text-left{
+    margin-top: 6rem;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: 6rem;
+    max-width: 22.5rem;
+    flex-direction: column;
 }
 
 .best-selling{
