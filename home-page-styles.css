@@ -11,7 +11,7 @@
 }
 
 /*HOME PAGE styling*/
-.landing-page{ 
+.banner{ 
     /*use this to style the container for the landing page items*/
     background-image: url("A3 images and stuff/home\ page\ banner\ image.jpg");
     background-size: cover;
@@ -81,7 +81,7 @@
     margin-right: 20%;
 }
 
-.btn--home{
+.btn--home-banner{
     background-color: #1D1D1D;
     color: #FFFFFF;
 }
@@ -91,4 +91,40 @@
     outline-color: #FFFFFF;
     outline-width: 2px;
     backdrop-filter: blur(5px);
+}
+
+.auto-scrolling-bar{
+    background-color: #1D1D1D;
+    min-height: 10vh;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.auto-scrolling-text{
+    color: #FFFFFF;
+}
+
+.westec-intro{
+    min-height: 45rem;
+}
+
+.westec-about{
+    min-height: 85rem;
+    background-color: #E1E1E1;
+}
+
+.best-selling{
+    margin-top: 3rem;
+    min-height: 12rem;
+}
+
+.reviews{
+    margin-top: 3rem;
+    min-height: 12rem;
+}
+
+.end-note{
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    min-height: 14rem;
 }

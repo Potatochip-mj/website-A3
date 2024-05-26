@@ -3,6 +3,15 @@
 /*import url for Inter and Tilt Neon typeface*/
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Tilt+Neon&display=swap'); 
 
+/*Overall styling for the page*/
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0;
+    height: 57rem;
+}
+
 .cluster{
     display: flex;
     flex-wrap: wrap;
@@ -95,16 +104,6 @@ p{  /*this one is for normal text*/
     outline-style: solid;
     outline-color: white;
     outline-width: 2px;
-}
-
-/*Overall styling for the page*/
-body{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 2rem;
-    margin: 0;
-    height: 57rem;
 }
 
 
