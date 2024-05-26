@@ -28,26 +28,31 @@ body{
 h1{
     font-family: "Tilt Neon";
     font-size: 47.8px;
+    font-weight: 100;
 }
 
 h2{
     font-family: "Inter";
     font-size: 39.8px;
-    font-weight: 300;
+    font-weight: 350;
     margin: 0;
+}
+
+.h2--dark-purple{
+    color: #6F11A8;
 }
 
 h3{
     font-family: "Inter";
     font-size: 33.2px;
-    font-weight: 300;
+    font-weight: 350;
     margin: 0;
 }
 
 p{  /*this one is for normal text*/
     font-family: "Inter";
     font-size: 16px;
-    font-weight: 300;
+    font-weight: 350;
 }
 
 .p-italics{  /*this one is for italicised text*/
