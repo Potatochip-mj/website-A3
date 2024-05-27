@@ -34,6 +34,12 @@
 .box{ /*this is for the delete items button in the cart, will fix up later*/
     width: 12.5rem;
     height: 12.5rem;
+    display: flex;
+}
+
+.box > .delete-button{
+    position: absolute;
+    align-self: flex-start;
 }
 
 .cart-item--1{

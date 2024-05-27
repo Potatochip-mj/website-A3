@@ -1,18 +1,7 @@
 
 @import url("universal-styles.css");
 
-.item-details--name{
-    font-family: "Inter";
-    font-size: 23px;
-    font-weight: bold;
-}
 
-.item-details--price{
-    font-family: "Inter";
-    font-size: 19.2px;
-    font-weight: 300;
-    font-style: italic;
-}
 
 /*PRODUCT PAGE styling*/
 .item-container{

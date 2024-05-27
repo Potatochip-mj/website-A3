@@ -75,6 +75,19 @@ p{  /*this one is for normal text*/
     font-size: 11.1px;
 }
 
+.item-details--name{
+    font-family: "Inter";
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.item-details--price{
+    font-family: "Inter";
+    font-size: 19.2px;
+    font-weight: 300;
+    font-style: italic;
+}
+
 /*BUTTON styling*/
 .btn{
     font-family: "Inter";
