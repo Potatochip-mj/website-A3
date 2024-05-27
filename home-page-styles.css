@@ -199,6 +199,10 @@
     margin-top: 3rem;
 }
 
+.best-selling > h2{
+    margin-left: 3rem;
+}
+
 .best-selling-scroller{
     margin-top: 0.5rem;
     display: grid;
@@ -206,7 +210,7 @@
     grid-auto-flow: column;
     grid-auto-columns: 11.7%;
 
-    padding: 0 1rem 1rem 1rem;
+    padding: 0 1rem 1rem 2.5rem;
 
     overflow-x: auto;
     overscroll-behavior-inline: contain;
@@ -222,7 +226,7 @@
 
 .best-selling-item > img{
     inline-size: 100%;
-    aspect-ratio: 16 / 16;
+    aspect-ratio: 20 / 20;
     object-fit: cover;
 
     transition: ease-in-out 0.25s;
@@ -242,11 +246,70 @@
 
 .reviews{
     margin-top: 3rem;
-    min-height: 12rem;
+}
+
+.reviews > h2{
+    margin-left: 3rem;
+}
+
+.reviews-scroller{
+    margin-top: 0.5rem;
+    display: grid;
+    gap: 0.5rem;
+    grid-auto-flow: column;
+    grid-auto-columns: 22%;
+
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+}
+
+.reviews-item{
+    padding-left: 1rem;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 1rem;
+}
+
+.reviews-item-image{
+    margin: 1rem 0 0 2rem;
+    margin-bottom: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.reviews-item-image > img{
+    inline-size: 100%;
+    aspect-ratio: 16 / 16;
+    object-fit: cover;
+    max-width: 10rem;
+}
+
+.reviews-item-text{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: auto;
+    margin-right: auto;
+    max-width: 9rem;
+}
+
+
+.reviews-item-title{
+    font-family: "Inter";
+    font-size: 16px;
+    margin-right: auto;
 }
 
 .end-note{
-    margin-top: 2rem;
-    margin-bottom: 4rem;
-    min-height: 14rem;
+    margin: 5rem auto 0 auto;
+    flex-direction: column;
+}
+
+.end-note > p{
+    margin: 0 auto 0 auto;
+    max-width: 22.1rem;
+    text-align: center;
+}
+
+.end-note > a{
+    margin: 2rem auto 6rem auto;
 }
