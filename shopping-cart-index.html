@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="shopping-cart-styles.css">
+    <script src="universal-script.js"></script>
     <title>Shopping Cart</title>
 </head>
 <body>
@@ -36,9 +37,15 @@
                     <img class="cart-item--img" src="A3 images and stuff/speaker img 1.jpg">
                 </div> 
                 
-                <div class="item-details">
-                    <p class="item-details--name">SANSAI 20W TWS BLUETOOTH SPEAKER</p>
-                    <p class="item-details--price">$75.00</p>
+                <div class="cart-details">
+                    <p class="cart-details--name">SANSAI 20W TWS BLUETOOTH SPEAKER</p>
+                    <p class="cart-details--price">$75.00</p>
+                    
+                    <div class="quantity-btn">
+                        <button class="qty-count qty-count--minus" type="button">-</button>
+                        <input class="product-qty" type="number" name="product-qty" min="0" max="10" value="1">
+                        <button class="qty-count qty-count--add" type="button">+</button>
+                    </div>
                 </div>
             </div>
     
@@ -48,9 +55,15 @@
                     <img class="cart-item--img" src="A3 images and stuff/cable image 1.jpg">
                 </div>
                 
-                <div class="item-details">
-                    <p class="item-details--name">MCDODO 100W 5A USB-C TO USB-C HIGH SPEED LEAD - 1.2M</p>
-                    <p class="item-details--price">$16.95</p>
+                <div class="cart-details">
+                    <p class="cart-details--name">MCDODO 100W 5A USB-C TO USB-C HIGH SPEED LEAD - 1.2M</p>
+                    <p class="cart-details--price">$16.95</p>
+
+                    <div class="quantity-btn">
+                        <button class="qty-count qty-count--minus" type="button">-</button>
+                        <input class="product-qty" type="number" name="product-qty" min="0" max="10" value="1">
+                        <button class="qty-count qty-count--add" type="button">+</button>
+                    </div>
                 </div>
             </div>
 
@@ -60,9 +73,15 @@
                     <img class="cart-item--img" src="A3 images and stuff/cart image placeholder.svg">
                 </div>
                
-                <div class="item-details">
-                    <p class="item-details--name">PRODUCT NAME</p>
-                    <p class="item-details--price">$XX.XX</p>
+                <div class="cart-details">
+                    <p class="cart-details--name">PRODUCT NAME</p>
+                    <p class="cart-details--price">$XX.XX</p>
+
+                    <div class="quantity-btn">
+                        <button class="qty-count qty-count--minus" type="button">-</button>
+                        <input class="product-qty" type="number" name="product-qty" min="0" max="10" value="1">
+                        <button class="qty-count qty-count--add" type="button">+</button>
+                    </div>
                 </div>
             </div>
         </div>
