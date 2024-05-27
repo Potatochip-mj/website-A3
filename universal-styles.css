@@ -112,7 +112,7 @@ p{  /*this one is for normal text*/
     outline-width: 2px;
 }
 
-/*this is the product page quantity button*/
+/*this is the product-details page quantity button*/
 .quantity-btn--product-detail{
     color:#FFFFFF;
     font-size: 16px;
