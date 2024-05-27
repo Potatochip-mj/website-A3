@@ -1,5 +1,9 @@
 @import url("universal-styles.css");
 
+html{
+    scroll-behavior: smooth;
+}
+
 /* Nav bar styling for home page*/
 .nav-btn--home{
     color: #FFFFFF;
@@ -86,7 +90,7 @@
     color: #FFFFFF;
 }
 
-.btn--home-accent{
+.btn--explore-more{
     outline-style: solid;
     outline-color: #FFFFFF;
     outline-width: 2px;

@@ -95,6 +95,7 @@ p{  /*this one is for normal text*/
     text-decoration: none;
     text-align: center;
     vertical-align: middle;
+    cursor: pointer;
 }
 
 .btn--primary{
