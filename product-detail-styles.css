@@ -1,13 +1,13 @@
 
 @import url("universal-styles.css");
 
-.product-details--name{
+.item-details--name{
     font-family: "Inter";
     font-size: 23px;
     font-weight: bold;
 }
 
-.product-details--price{
+.item-details--price{
     font-family: "Inter";
     font-size: 19.2px;
     font-weight: 300;
@@ -15,35 +15,35 @@
 }
 
 /*PRODUCT PAGE styling*/
-.product-container{
+.item-container{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 }
 
-.product-container__img{
+.item-container__img{
     max-width: 500px;
     max-height: 500px;
 }
 
-.product-container__details{ /*might need to do a grid so the different sections can overlap slightly*/
+.item-container__details{ /*might need to do a grid so the different sections can overlap slightly*/
     display: flex;
     height: 200px;
     flex-direction: column;
 }
 
-.product-details{
+.item-details{
     line-height: 20px;
 }
 
-.product-container__btns{ /*need to make these stack on top of each other*/
+.item-container__btns{ /*need to make these stack on top of each other*/
     display: flex;
     height: 150px;
     flex-direction: column;
     align-items: flex-end;
 }
 
-.product-container__btns > .btn--accent-1{
+.item-container__btns > .btn--accent-1{
     margin: 0.938rem 0 0.938rem 0;
     
 }

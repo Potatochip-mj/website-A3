@@ -44,7 +44,7 @@
     height: 12.5rem;
 }
 
-.cart-item--1 > .product-details{
+.cart-item--1 > .item-details{
     align-self: self-start;
     padding: 0.5rem;
 }
@@ -57,7 +57,7 @@
     height: 12.5rem;
 }
 
-.cart-item--2 > .product-details{
+.cart-item--2 > .item-details{
     align-self: self-start;
     padding: 0.5rem;
 }
@@ -70,7 +70,7 @@
     height: 12.5rem;
 }
 
-.cart-item--3 > .product-details{
+.cart-item--3 > .item-details{
     align-self: self-start;
     padding: 0.5rem;
 
