@@ -25,6 +25,19 @@
     line-height: 20px;
 }
 
+.item-details--name{
+    font-family: "Inter";
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.item-details--price{
+    font-family: "Inter";
+    font-size: 19.2px;
+    font-weight: 300;
+    font-style: italic;
+}
+
 .item-container__btns{ /*need to make these stack on top of each other*/
     display: flex;
     height: 150px;
