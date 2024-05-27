@@ -12,6 +12,7 @@ function addOne(){
 
     let newQuantity = currentQuantity + 1;
     currentQuantity = newQuantity;
+    console.log(currentQuantity);
 }
 
 //honestly idk what I'm doing, will attempt to fix this later
