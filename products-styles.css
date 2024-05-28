@@ -1,2 +1,19 @@
-
 @import url("universal-styles.css");
+
+.title{
+    margin-top: 2rem;
+    padding-left: 7rem;
+}
+
+.filter-bar{
+    flex-direction: row;
+    margin: 2rem 0 auto 0;
+}
+
+.filter-bar > :nth-child(1){
+    padding-left: 7rem;
+}
+
+.filter-bar >:nth-last-child(1){
+    padding-right: 7rem;
+}
