@@ -308,3 +308,21 @@ footer{
 .address{
     text-wrap: balance;
 }
+
+/*Page heading styling (used in Cart, Checkout and Confirmation pages)*/
+
+.page-heading{
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+}
+
+.center-heading{
+    align-self: center;
+}
+
+.page-indicator{
+    max-width: 250px;
+    align-self: center;
+    margin: 1rem;
+}
