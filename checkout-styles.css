@@ -1,3 +1,130 @@
 @import url("universal-styles.css");
 
 /*CHECKOUT page styling*/
+
+.checkout__items{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 1rem 2rem 2rem;
+}
+
+.checkout__column-1{
+    display: flex;
+    flex-direction: column;
+    width: 28.125rem;
+    align-self: flex-start;
+    margin: 0 2rem 0 0;
+}
+
+.card-heading{
+    font-size: 23px;
+    color: #565656;
+    margin-bottom: 0;
+}
+
+.input-label{
+    color: #565656;
+    font-family: "Inter";
+    margin: 20px 0 5px 0;
+}
+
+.checkout__cards--shipping{
+    display: flex;
+    flex-direction: column;
+    max-width: 425px;
+    max-height: 650px;
+    background-color: #E1E1E1;
+    border-radius: 1.5rem;
+    padding: 1rem 3rem 4rem 2rem;
+    align-self: flex-start;
+}
+
+.line--large{
+    width: 20.625rem;
+    height: 2.5rem;
+    border-radius: 0.5rem;
+    text-indent: 10px;
+    border: none;
+    outline-color:rgb(86, 86, 86, 0.5);
+    color: #565656;
+}
+
+.line--medium{
+    width: 14.063rem;
+    height: 2.5rem;
+    border-radius: 0.5rem;
+    text-indent: 10px;
+    border: none;
+    outline-color:rgb(86, 86, 86, 0.5);
+    color: #565656;
+}
+
+.line--small{
+    width: 6.25rem;
+    height: 2.5rem;
+    border-radius: 0.5rem;
+    text-indent: 10px;
+    border: none;
+    outline-color:rgb(86, 86, 86, 0.5);
+    color: #565656;
+}
+
+.state-code{
+    display: flex;
+    flex-direction: row;
+    width: 225px;
+    height: 75px;
+    justify-content: space-between;
+}
+
+.state-code--inner{
+    display: flex;
+    flex-direction: column;
+    height: 63px;
+}
+
+.calculated-cost{
+    margin-top: 0.5rem;
+}
+
+.fixed-input{
+    width: 14.063rem;
+    height: 2.5rem;
+    border-radius: 0.5rem;
+    text-indent: 10px;
+    border: 2px solid #FFFFFF;
+    color: #565656;
+    margin-top: 0.313rem;
+}
+
+.fixed-input > p{
+    margin: 0.5rem 0;
+}
+
+.cart__cart-summary{
+    width: 26.563rem;
+    height: 42.5rem;
+    background-color: #1D1D1D;
+    border-top-left-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+    margin: 0;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+.cart-summary__text{
+    color:#FFFFFF;
+    margin: 4rem;
+}
+
+.cart-summary__btns{
+    display: flex;
+    flex-direction: column;
+    height: 150px;
+    margin: 4rem;
+}
+
+.cart-summary__btns > .btn--primary{
+    margin: 1rem 0 1rem 0;
+}

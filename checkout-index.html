@@ -27,6 +27,58 @@
         <h2 class="center-heading">CHECKOUT</h2>
         <img class="page-indicator" src="A3 images and stuff/Page indicator 2.svg">
     </div>
+
+    <div class="checkout cluster">
+        <div class="checkout__items">
+            <div class="checkout__column-1">
+                <div class="checkout__cards--shipping">
+                    <p class="card-heading"><b>Shipping</b></p>
+                    <label class="input-label" for="address-line-1">Address Line 1</label>
+                    <input class="line--large" type="text" name="address-line-1">
+                    <label class="input-label" for="address-line-2">Address Line 2</label>
+                    <input class="line--large" type="text" name="address-line-2">
+                    <label class="input-label" for="suburb">Suburb</label>
+                    <input class="line--medium" type="text" name="suburb">
+                    <label class="input-label" for="city">City</label>
+                    <input class="line--medium" type="text" name="city">
+                    <div class="state-code">
+                        <div class="state-code--inner">
+                            <label class="input-label" for="state">State</label>
+                            <input class="line--small" type="text" name="state">
+                        </div> 
+                        <div class="state-code--inner">
+                            <label class="input-label" for="postcode">Postcode</label>
+                            <input class="line--small" type="text" name="postcode">
+                        </div>
+                    </div>
+                    
+                    <div class="calculated-cost">
+                        <label class="input-label" for="calculated-shipping-cost">Calculated Shipping Cost</label>
+                        <div class="fixed-input" name="calculated-shipping-cost"><p><b>$XYZ.00</b></p></div>
+                    </div>
+                </div>
+                <div class="checkout__cards--payment"></div>
+            </div>
+    
+            <div class="checkout__column-2">
+                <div class="checkout__cards--discounts"></div>
+            </div>
+            
+            
+            <div class="cart__cart-summary">
+                <div class="cart-summary__text">
+                    <h2><b>TOTAL $$</b></h2>
+                    <p>No. of Items in Cart: <b>XYZ</b></p>
+                </div>
+    
+                <div class="cart-summary__btns">
+                    <a href="#" class="btn btn--primary">Confirm</a> <!--takes you to confirmation page-->
+                    <a href="#" class="btn btn--accent-2">Back</a> <!--takes you to cart-->
+                </div>
+            </div>
+        </div>
+        
+    </div>
     
 </body>
 </html>
