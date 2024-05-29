@@ -31,8 +31,8 @@
 .checkout__cards--shipping{
     display: flex;
     flex-direction: column;
-    max-width: 425px;
-    max-height: 650px;
+    max-width: 26.563rem;
+    max-height:40.625rem;
     background-color: #E1E1E1;
     border-radius: 1.5rem;
     padding: 1rem 3rem 4rem 2rem;
