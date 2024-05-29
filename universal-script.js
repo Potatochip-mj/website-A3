@@ -16,3 +16,11 @@ function addOne(){
 }
 
 //honestly idk what I'm doing, will attempt to fix this later
+
+const products = [
+
+    {
+        shortName: "Sansai Bluetooth Speaker"
+    }
+
+]

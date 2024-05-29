@@ -58,14 +58,14 @@
     flex-direction: column;
 }
 
-.item > img{
+.item > a > img{
     aspect-ratio: 1/1;
     max-width: 15rem;
 
     transition: ease-in-out 0.25s;
 }
 
-.item > img:hover{
+.item > a > img:hover{
     box-shadow: 0px 4px 15px 1px rgba(154, 21, 236, 0.25);
     cursor: pointer;
 }
