@@ -12,8 +12,35 @@
 
 .filter-bar > :nth-child(1){
     padding-left: 7rem;
+    padding-right: 2rem;
 }
 
 .filter-bar >:nth-last-child(1){
     padding-right: 7rem;
+}
+
+.filter-bar-filter{
+    flex-direction: row;
+    margin: 0;
+}
+
+.filter-bar-filter > img{
+    max-height: 2rem;
+}
+
+.filter-bar-search > input{
+    min-height: 2rem;
+    min-width: 35rem;
+    font-family: "Tilt Neon";
+    font-size: larger;
+}
+
+.filter-bar-sort{
+    flex-direction: row;
+}
+
+.sort-container{
+    font-family: "Inter";
+    font-size: 20px;
+    min-height: 2rem;
 }
