@@ -24,8 +24,13 @@
     margin: 0;
 }
 
+.filter-bar-filter > h3:hover{
+    cursor: pointer;
+}
+
 .filter-bar-filter > img{
     max-height: 2rem;
+    cursor: pointer;
 }
 
 .filter-bar-search > input{
