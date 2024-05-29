@@ -7,7 +7,7 @@
 
 .filter-bar{
     flex-direction: row;
-    margin: 2rem 0 auto 0;
+    margin: 2rem 0 2rem 0;
 }
 
 .filter-bar > :nth-child(1){
@@ -30,7 +30,7 @@
 
 .filter-bar-search > input{
     min-height: 2rem;
-    min-width: 35rem;
+    min-width: 30rem;
     font-family: "Tilt Neon";
     font-size: larger;
 }
@@ -43,4 +43,33 @@
     font-family: "Inter";
     font-size: 20px;
     min-height: 2rem;
+    margin-bottom: auto;
+}
+
+.items-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 240px);
+    justify-content: space-between;
+    margin: 0 7rem 4rem 7rem;
+    gap: 1rem;
+}
+
+.item{
+    flex-direction: column;
+}
+
+.item > img{
+    aspect-ratio: 1/1;
+    max-width: 15rem;
+
+    transition: ease-in-out 0.25s;
+}
+
+.item > img:hover{
+    box-shadow: 0px 4px 15px 1px rgba(154, 21, 236, 0.25);
+    cursor: pointer;
+}
+
+.item-title{
+    font-size: 1.5rem;
 }
