@@ -72,12 +72,76 @@ const products = [
     }
 ];
 
-function hideProductsPageElements(){
+function showFilters(){
     items = document.querySelector('.items-container');
     search = document.querySelector('.filter-bar-search');
     sort = document.querySelector('.filter-bar-sort');
+    filterButton = document.querySelector('.filter-bar-filter');
+    backButton = document.querySelector('.back-button-container');
+    filters = document.querySelector('.filters-container');
 
-    items.style.visibility = 'hidden';
-    search.style.visibility = 'hidden';
-    sort.style.visibility = 'hidden';
+    items.style.display = 'none';
+    search.style.display = 'none';
+    sort.style.display = 'none';
+    filterButton.style.display = 'none';
+    backButton.style.display = 'flex';
+    filters.style.display = 'flex';
 };
+
+function showItems(){
+    items = document.querySelector('.items-container');
+    search = document.querySelector('.filter-bar-search');
+    sort = document.querySelector('.filter-bar-sort');
+    filterButton = document.querySelector('.filter-bar-filter');
+    backButton = document.querySelector('.back-button-container');
+    filters = document.querySelector('.filters-container');
+
+    items.style.display = 'grid';
+    search.style.display = 'flex';
+    sort.style.display = 'flex';
+    filterButton.style.display = 'flex';
+    backButton.style.display = 'none';
+    filters.style.display = 'none';
+};
+
+let priceMin = document.getElementById("price-min");
+let priceMax = document.getElementById("price-max");
+
+let inputLeft = document.getElementById("input-left");
+let inputRight = document.getElementById("input-right");
+
+let dotLeft = document.getElementById("slider-dot-left");
+let dotRight = document.getElementById("slider-dot-right");
+
+let sliderRange = document.getElementById("sider-range-id");
+
+function setLeftValue(){
+    let value = this.value;
+    let min = parseInt(this.min);
+    let max = parseInt(this.max);
+
+    value = Math.min(parseInt(value), parseInt(inputRight.value) - 1);
+
+    let percent = ((value - min) / (max - min)) * 100;
+
+    sliderRange.style.left = percent + '%';
+    dotLeft.style.left = percent + '%';
+    titleMin.innerText = value;
+}
+
+function setRightValue(){
+    let value = this.value;
+    let min = parseInt(this.min);
+    let max = parseInt(this.max);
+
+    value = Math.max(parseInt(value), parseInt(inputLeft.value) + 1);
+
+    let percent = ((value - min) / (max - min)) * 100;
+
+    sliderRange.style.right = (100 - percent) + '%';
+    dotLeft.style.right = (100 - percent) + '%';
+    titleMax.innerText = value;
+}
+
+inputLeft.addEventListener('input', setLeftValue);
+inputRight.addEventListener('input', setRightValue);

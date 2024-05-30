@@ -291,7 +291,7 @@ html{
     display: flex;
     flex-direction: column;
     margin: 0 auto auto 0;
-    max-width: 9rem;
+    max-width: 12rem;
 }
 
 .reviews-item-text > :nth-last-child(1){

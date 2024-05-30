@@ -31,8 +31,12 @@
 
     <div class="filter-bar cluster">
         <div class="filter-bar-filter cluster">
-            <h3 onclick="hideProductsPageElements()">FILTER</h3>
-            <img onclick="hideProductsPageElements()" src="A3 images and stuff/filter logo.png" alt="Icon art of control panel">
+            <h3 onclick="showFilters()">FILTER</h3>
+            <img onclick="showFilters()" src="A3 images and stuff/filter logo.png" alt="Icon art of control panel">
+        </div>
+
+        <div class="back-button-container">
+            <a onclick="showItems()" href="#" class="btn btn--primary">Back</a>
         </div>
 
         <div class="filter-bar-search">
@@ -101,6 +105,80 @@
             <a href="product-detail-index.html"><img src="A3 images and stuff/sansai speaker 1.jpg" alt="Image of cylinder speaker"></a>
             <p class="item-title">Sansai Speaker</p>
             <p class="p">$75.00</p>
+        </div>
+    </div>
+
+    <div class="filters-container">
+        <div class="price-container cluster">
+            <div class="price-title">
+                <h3 class="h3--dark-purple">PRICE: </h3>
+                <h3 >$</h3>
+                <h3 id="price-min">10</h3>
+                <h3 >-</h3>
+                <h3 >$</h3>
+                <h3 id="price-max">100</h3>
+            </div>
+            <div class="price-slider">
+                <div class="slider-body">
+                    <div class="slider-track">
+                        <div id="slider-range-id" class="slider-range"></div>
+                        <div id="slider-dot-left" class="slider-dot slider-dot--left"></div>
+                        <div id="slider-dot-right" class="slider-dot slider-dot--right"></div>
+                    </div>
+                    <input id="input-left"  min="0" max="200" value="10" type="range" class="slider-input">
+                    <input id="input-right" min="0" max="200" value="100"  type="range" class="slider-input">
+                </div>
+            </div>
+        </div>
+        <div class="category-brand-container cluster">
+            <div class="category-container cluster">
+                <h3 class="h3--dark-purple">CATEGORY:</h3>
+                <label class="checkbox-container">Speakers
+                    <input type="checkbox" name="category" value="Speakers">
+                </label>
+                <label class="checkbox-container">Cables
+                    <input type="checkbox" name="category" value="Cables">
+                </label>
+                <label class="checkbox-container">Ports
+                    <input type="checkbox" name="category" value="Ports">
+                </label>
+                <label class="checkbox-container">Remotes
+                    <input type="checkbox" name="category" value="Remotes">
+                </label>
+                <label class="checkbox-container">Microphones
+                    <input type="checkbox" name="category" value="Microphones">
+                </label>
+                <label class="checkbox-container">Headsets
+                    <input type="checkbox" name="category" value="Headsets">
+                </label>
+                <label class="checkbox-container">Chargers
+                    <input type="checkbox" name="category" value="Chargers">
+                </label>
+            </div>
+            <div class="brand-container cluster">
+                <h3 class="h3--dark-purple">BRAND:</h3>
+                <label class="checkbox-container">Denon
+                    <input type="checkbox" name="brand" value="Denon">
+                </label>
+                <label class="checkbox-container">Konken
+                    <input type="checkbox" name="brand" value="Konken">
+                </label>
+                <label class="checkbox-container">Koss
+                    <input type="checkbox" name="brand" value="Koss">
+                </label>
+                <label class="checkbox-container">Mcdodo
+                    <input type="checkbox" name="brand" value="Mcdodo">
+                </label>
+                <label class="checkbox-container">Sansai
+                    <input type="checkbox" name="brand" value="Sansai">
+                </label>
+                <label class="checkbox-container">Tp-Link
+                    <input type="checkbox" name="brand" value="Tp-Link">
+                </label>
+                <label class="checkbox-container">Westec
+                    <input type="checkbox" name="category" value="Westec">
+                </label>
+            </div>
         </div>
     </div>
 
