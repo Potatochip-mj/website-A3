@@ -11,7 +11,6 @@
 <body>
     <nav class="nav-bar cluster">
         <div class="Westec-logo cluster">
-            <!-- if the image file moves into a different location, MUST update the links!! -->
             <a href="home-page-index.html" target="_self">
                 <img src="A3 images and stuff/westec logo.svg">
             </a>
@@ -25,8 +24,19 @@
     </nav>
 
     <div class="item-container cluster">
-        <div class="item-container__carousel">
-            <img class="item-container__img" src="A3 images and stuff/sansai speaker 1.jpg">
+        <div class="item-container__carousel"> <!--container for the image carousel-->
+            <div class="carousel-box">
+                <img class="item-container__img" src="A3 images and stuff/sansai speaker 1.jpg">
+                <img class="item-container__img" src="A3 images and stuff/sansai speaker 2.jpg">
+                <img class="prev" onclick="plusSlides(-1)" src="A3 images and stuff/🦆 icon _chevron left_.svg">
+                <img class="next" onclick="plusSlides(1)" src="A3 images and stuff/🦆 icon _chevron right_.svg">
+                <div class="ellipsis">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+
+            
         </div>
 
         <div class="item-container__details">
@@ -42,8 +52,8 @@
             </div>
             
             <div class="item-container__btns">
-                <a href="#" class="btn btn--primary">Add to Cart</a> <!--button becomes "Added", product is added to cart-->
-                <a href="#" class="btn btn--accent-1">Back</a> <!--takes you to product list-->
+                <a href="#" class="btn btn--primary">Add to Cart</a> 
+                <a href="#" class="btn btn--accent-1">Back</a> 
             </div>
         </div>
     </div>

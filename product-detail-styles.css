@@ -1,8 +1,6 @@
 
 @import url("universal-styles.css");
 
-
-
 /*PRODUCT PAGE styling*/
 .item-container{
     display: flex;
@@ -10,12 +8,72 @@
     justify-content: space-around;
 }
 
-.item-container__img{
-    max-width: 500px;
-    max-height: 500px;
+/*Image carousel*/
+.item-container__carousel{
+    max-width: 37.5rem;
+    max-height: 37.5rem;
+    position: relative;
 }
 
-.item-container__details{ /*might need to do a grid so the different sections can overlap slightly*/
+.carousel-box{
+    display: flex;
+    width: 500px;
+    height: 600px;
+}
+
+.item-container__img{
+    width: 500px;
+    height: 500px;
+    display: none;
+}
+
+.prev, .next{
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    transition: 0.6s ease;
+}
+
+.next{
+    right: 0;
+}
+
+.prev{
+    left: 0;
+}
+
+.ellipsis{
+    display: flex;
+    height: 20px;
+    width: 500px;
+    justify-content: center;
+    align-self: flex-end;
+}
+
+.dot{
+    align-self: center;
+    cursor: pointer;
+    height: 12px;
+    width: 12px;
+    margin: 0 2px;
+    background-color: #E1E1E1;
+    border-radius: 50%;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover{
+    background-color: #565656;
+}
+
+.fade{
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+
+/*Item details*/
+.item-container__details{ 
     display: flex;
     height: 200px;
     flex-direction: column;
@@ -47,5 +105,4 @@
 
 .item-container__btns > .btn--accent-1{
     margin: 0.938rem 0 0.938rem 0;
-    
 }

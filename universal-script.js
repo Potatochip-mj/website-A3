@@ -1,21 +1,4 @@
-//This is code for the shopping cart quantity button
-//assigning variables for CSS selectors to interact with the button
-const quantityButton = document.getElementsByClassName("quantity-btn"); //idk if const will work since there are technically multiple elements called "quantity-btn"
-const quantityMinus = document.getElementsByClassName("qty-count--minus");
-const quantityAdd = document.getElementsByClassName("qty-count--add");
-const productQuantity = document.getElementsByClassName("product-qty")
-
-//onclick for quantityAdd - add one to the input field value
-function addOne(){
-    let currentQuantity = parseInt(productQuantity.innerHTML);
-    console.log(currentQuantity);
-
-    let newQuantity = currentQuantity + 1;
-    currentQuantity = newQuantity;
-    console.log(currentQuantity);
-}
-
-//honestly idk what I'm doing, will attempt to fix this later
+//This is the page for all the JS script for the Westec website!
 
 
 //A key value pair array used to hold all the items of the site
@@ -137,3 +120,56 @@ function showItems(){
     filters.style.display = 'none';
 };
 
+
+
+//product details page - image carousel
+let slideIndex = 1;
+showSlides(slideIndex);
+
+//next/previous image controls
+function plusSlides(n){
+    showSlides(slideIndex += n);
+}
+
+function showSlides(n){
+    let slides = document.getElementsByClassName("item-container__img");
+    let dots = document.getElementsByClassName("dot");
+
+    if (n > slides.length){
+        slideIndex = 1;
+    }
+
+    if (n < 1){
+        slideIndex = slides.length;
+    }
+
+    for (i = 0; i < dots.length; i++){
+        slides[i].style.display = "none";
+    }
+    
+    for (i = 0; i< dots.length; i++){
+        dots[i].className = dots[i].className.replace(" active", "")
+    }
+
+    slides[slideIndex - 1].style.display = "flex";
+    dots[slideIndex - 1].className += " active";
+}
+
+
+//Shopping cart script - quantity button
+const quantityButton = document.getElementsByClassName("quantity-btn"); //idk if const will work since there are technically multiple elements called "quantity-btn"
+const quantityMinus = document.getElementsByClassName("qty-count--minus");
+const quantityAdd = document.getElementsByClassName("qty-count--add");
+const productQuantity = document.getElementsByClassName("product-qty")
+
+//onclick for quantityAdd - add one to the input field value
+function addOne(){
+    let currentQuantity = parseInt(productQuantity.innerHTML);
+    console.log(currentQuantity);
+
+    let newQuantity = currentQuantity + 1;
+    currentQuantity = newQuantity;
+    console.log(currentQuantity);
+}
+
+//honestly idk what I'm doing, will attempt to fix this later
