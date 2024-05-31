@@ -1,8 +1,6 @@
 
 @import url("universal-styles.css");
 
-
-
 /*PRODUCT PAGE styling*/
 .item-container{
     display: flex;
@@ -10,15 +8,76 @@
     justify-content: space-around;
 }
 
-.item-container__img{
-    max-width: 500px;
-    max-height: 500px;
+/*Image carousel*/
+.item-container__carousel{
+    max-width: 37.5rem;
+    max-height: 37.5rem;
+    position: relative;
 }
 
-.item-container__details{ /*might need to do a grid so the different sections can overlap slightly*/
+.carousel-box{
     display: flex;
-    height: 200px;
+    width: 500px;
+    height: 600px;
+}
+
+.item-container__img{
+    width: 500px;
+    height: 500px;
+    display: none;
+}
+
+.prev, .next{
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    transition: 0.6s ease;
+}
+
+.next{
+    right: 0;
+}
+
+.prev{
+    left: 0;
+}
+
+.ellipsis{
+    display: flex;
+    height: 20px;
+    width: 500px;
+    justify-content: center;
+    align-self: flex-end;
+}
+
+.dot{
+    align-self: center;
+    cursor: pointer;
+    height: 12px;
+    width: 12px;
+    margin: 0 2px;
+    background-color: #E1E1E1;
+    border-radius: 50%;
+    transition: background-color 0.6s ease;
+}
+
+.active-img, .dot:hover{
+    background-color: #565656;
+}
+
+.fade{
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+
+/*Item details*/
+.item-container__details{ 
+    display: flex;
+    height: 225px;
     flex-direction: column;
+    position: relative;
 }
 
 .item-details{
@@ -39,6 +98,9 @@
 }
 
 .item-container__btns{ /*need to make these stack on top of each other*/
+    position: absolute;
+    right: 0;
+    bottom: 0;
     display: flex;
     height: 150px;
     flex-direction: column;
@@ -46,6 +108,62 @@
 }
 
 .item-container__btns > .btn--accent-1{
-    margin: 0.938rem 0 0.938rem 0;
-    
+    margin-top: 0.938rem;
+}
+
+/*Accordion*/
+.item-container__description{
+    display: flex;
+    flex-direction: column;
+}
+
+.accordion{
+    background-color: #565656;
+    color: #FFFFFF;
+    font-family: "Inter";
+    font-size: 19.2px;
+    font-weight: 300;
+    text-align: left;
+    cursor: pointer;
+    padding: 20px;
+    width: 487px;
+    border: none;
+    border-bottom: 2px solid #FFFFFF;
+    outline: none;
+    transition: 0.4s;
+}
+
+.accordion--top{
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+.accordion--bottom{
+    border-bottom: none;
+}
+
+.active-accordion, .accordion:hover{
+    background-color: rgb(63, 63, 63);
+}
+
+.accordion-panel{
+    max-height: 0;
+    padding: 10px 20px;
+    background-color: #FFFFFF;
+    display: none;
+    overflow: hidden;
+    border-left: 2px solid #565656;
+    border-right: 2px solid #565656;
+    transition: max-height 0.2s ease-out;
+}
+
+.accordion-panel--bottom{
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    border-bottom: 2px solid #565656;
+}
+
+.panel-text{
+    font-family: "Inter";
+    line-height: 25px;
 }
