@@ -58,7 +58,7 @@ const products = [
         price: 400.00
     },
     {
-        shortName: "Koss Headphones",
+        shortName: "Koss Headset",
         longName: "KOSS BUDGET ON EAR STEREO HEADPHONES - BLACK",
         price: 70.00
     },

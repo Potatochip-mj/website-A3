@@ -170,10 +170,24 @@ input[type="range"]::-moz-range-thumb{
 }
 
 input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    height: 25px;
+    width: 25px;
+    border: solid 1px black;
     position: absolute;
-    left: 0;
-    height: 22.5px;
-    width: 22.5px;
+    top: -0.15rem;
+    left: -0.3rem;
+    cursor: pointer;
+}
+
+input[type="checkbox"]:checked {
+    height: 25px;
+    width: 25px;
+    background-color: black;
+    position: absolute;
+    top: -0.15rem;
+    left: -0.3rem;
 }
 
 .brand-container{
