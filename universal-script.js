@@ -148,11 +148,26 @@ function showSlides(n){
     }
     
     for (i = 0; i< dots.length; i++){
-        dots[i].className = dots[i].className.replace(" active", "")
+        dots[i].className = dots[i].className.replace(" active-img", "")
     }
 
     slides[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].className += " active";
+    dots[slideIndex - 1].className += " active-img";
+}
+
+//product details page - description accordion --- idk what's wrong with this rn, will fix soon
+var accordion = document.getElementsByClassName("accordion");
+
+for (i = 0; i < accordion.length; i++){
+    accordion[i].addEventListener("click", function(){
+        this.classList.toggle("active-accordion");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight){
+            panel.style.maxHeight = null;
+        } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+    });
 }
 
 

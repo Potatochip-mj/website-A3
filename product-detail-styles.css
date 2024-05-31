@@ -62,7 +62,7 @@
     transition: background-color 0.6s ease;
 }
 
-.active, .dot:hover{
+.active-img, .dot:hover{
     background-color: #565656;
 }
 
@@ -109,4 +109,61 @@
 
 .item-container__btns > .btn--accent-1{
     margin-top: 0.938rem;
+}
+
+/*Accordion*/
+.item-container__description{
+    display: flex;
+    flex-direction: column;
+}
+
+.accordion{
+    background-color: #565656;
+    color: #FFFFFF;
+    font-family: "Inter";
+    font-size: 19.2px;
+    font-weight: 300;
+    text-align: left;
+    cursor: pointer;
+    padding: 20px;
+    width: 487px;
+    border: none;
+    border-bottom: 2px solid #FFFFFF;
+    outline: none;
+    transition: 0.4s;
+}
+
+.accordion--top{
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+.accordion--bottom{
+    border-bottom: none;
+}
+
+.active-accordion, .accordion:hover{
+    background-color: rgb(63, 63, 63);
+}
+
+.accordion-panel{
+    max-height: 0;
+    padding: 10px 20px;
+    background-color: #FFFFFF;
+    display: none;
+    overflow: hidden;
+    border-left: 2px solid #565656;
+    border-right: 2px solid #565656;
+    transition: max-height 0.2s ease-out;
+}
+
+.accordion-panel--bottom{
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    border-bottom: 2px solid #565656;
+}
+
+.panel-text{
+    font-family: "Inter";
+    line-height: 25px;
 }
