@@ -5,15 +5,23 @@
 .checkout__items{
     display: flex;
     justify-content: space-between;
-    margin: 0 1rem 2rem 2rem;
+    margin: 0 0rem 2rem 2rem;
 }
 
 .checkout__column-1{
     display: flex;
     flex-direction: column;
-    width: 28.125rem;
+    width: 25rem;
     align-self: flex-start;
-    margin: 0 2rem 0 0;
+    margin: 0 3.5rem 0 1.5rem;
+}
+
+.checkout__column-2{
+    display: flex;
+    flex-direction: column;
+    width: 25rem;
+    align-self: flex-start;
+    margin: 0 1rem 0 0;
 }
 
 .card-heading{
@@ -31,12 +39,56 @@
 .checkout__cards--shipping{
     display: flex;
     flex-direction: column;
-    max-width: 26.563rem;
-    max-height:40.625rem;
+    width: 22rem;
+    height: 35rem;
     background-color: #E1E1E1;
     border-radius: 1.5rem;
-    padding: 1rem 3rem 4rem 2rem;
+    padding: 1rem 2rem 3rem 2rem;
     align-self: flex-start;
+}
+
+.card-box{
+    display: flex;
+    flex-direction: row;
+    width: 22rem;
+    justify-content: space-between;
+}
+
+
+.checkout__cards--payment{
+    display: flex;
+    flex-direction: column;
+    width: 20rem;
+    height: 18rem;
+    background-color: #E1E1E1;
+    border-radius: 1.5rem;
+    padding: 1rem 3rem 2rem 2rem;
+    align-self: flex-start;
+    margin-bottom: 1.5rem;
+}
+
+.checkout__cards--discounts{
+    display: flex;
+    flex-direction: column;
+    width: 20rem;
+    height: 14rem;
+    background-color: #E1E1E1;
+    border-radius: 1.5rem;
+    padding: 1rem 3rem 1.5rem 2rem;
+    align-self: flex-start;
+}
+
+.checkout__cards--discounts > .card-box{
+    height: 4rem;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.apply{
+    align-self: flex-end;
+    width: 120px;
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
 }
 
 .line--large{
@@ -75,12 +127,13 @@
     width: 225px;
     height: 75px;
     justify-content: space-between;
+    margin-top: 1rem;
 }
 
 .state-code--inner{
-    display: flex;
-    flex-direction: column;
-    height: 63px;
+    display: block;
+    height: 3.938rem;
+    margin-right: 1.25rem;
 }
 
 .calculated-cost{
