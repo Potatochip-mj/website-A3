@@ -17,6 +17,8 @@ function addOne(){
 
 //honestly idk what I'm doing, will attempt to fix this later
 
+
+//A key value pair array used to hold all the items of the site
 const products = [
 
     {
@@ -72,6 +74,8 @@ const products = [
     }
 ];
 
+
+//Button for the products list page to show all the filters
 function showFilters(){
     items = document.querySelector('.items-container');
     search = document.querySelector('.filter-bar-search');
@@ -86,8 +90,37 @@ function showFilters(){
     filterButton.style.display = 'none';
     backButton.style.display = 'flex';
     filters.style.display = 'flex';
+
+    const rangeInput = document.querySelectorAll('.slider-range-input input');
+    let priceMin = document.getElementById('price-min');
+    let priceMax = document.getElementById('price-max');
+    progress = document.querySelector(".slider-body .slider-range");
+
+    let priceGap = 20;
+
+    rangeInput.forEach(input =>{
+        input.addEventListener("input", e =>{
+            let minVal = parseInt(rangeInput[0].value);
+            let maxVal = parseInt(rangeInput[1].value);
+
+            if(maxVal - minVal < priceGap){
+                if(e.target.className === "range-min"){
+                    rangeInput[0].value = maxVal-priceGap;
+                }else{
+                    rangeInput[1].value = minVal+priceGap;
+                }
+            }else{
+                priceMin.innerHTML = minVal.toString();
+                priceMax.innerHTML = maxVal.toString();
+                progress.style.left = (minVal/rangeInput[0].max) * 100 + "%";
+                progress.style.right = 100 - (maxVal/rangeInput[1].max) * 100 + "%";
+            }
+        });
+    });
 };
 
+
+//Back button to close out of the filters and reshow the items
 function showItems(){
     items = document.querySelector('.items-container');
     search = document.querySelector('.filter-bar-search');
@@ -104,44 +137,3 @@ function showItems(){
     filters.style.display = 'none';
 };
 
-let priceMin = document.getElementById("price-min");
-let priceMax = document.getElementById("price-max");
-
-let inputLeft = document.getElementById("input-left");
-let inputRight = document.getElementById("input-right");
-
-let dotLeft = document.getElementById("slider-dot-left");
-let dotRight = document.getElementById("slider-dot-right");
-
-let sliderRange = document.getElementById("sider-range-id");
-
-function setLeftValue(){
-    let value = this.value;
-    let min = parseInt(this.min);
-    let max = parseInt(this.max);
-
-    value = Math.min(parseInt(value), parseInt(inputRight.value) - 1);
-
-    let percent = ((value - min) / (max - min)) * 100;
-
-    sliderRange.style.left = percent + '%';
-    dotLeft.style.left = percent + '%';
-    titleMin.innerText = value;
-}
-
-function setRightValue(){
-    let value = this.value;
-    let min = parseInt(this.min);
-    let max = parseInt(this.max);
-
-    value = Math.max(parseInt(value), parseInt(inputLeft.value) + 1);
-
-    let percent = ((value - min) / (max - min)) * 100;
-
-    sliderRange.style.right = (100 - percent) + '%';
-    dotLeft.style.right = (100 - percent) + '%';
-    titleMax.innerText = value;
-}
-
-inputLeft.addEventListener('input', setLeftValue);
-inputRight.addEventListener('input', setRightValue);
