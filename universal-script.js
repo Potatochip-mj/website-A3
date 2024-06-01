@@ -57,6 +57,8 @@ const products = [
     }
 ];
 
+let priceMinVal, priceMaxVal;
+
 
 //Button for the products list page to show all the filters
 function showFilters(){
@@ -75,8 +77,8 @@ function showFilters(){
     filters.style.display = 'flex';
 
     const rangeInput = document.querySelectorAll('.slider-range-input input');
-    let priceMin = document.getElementById('price-min');
-    let priceMax = document.getElementById('price-max');
+    let priceMinText = document.getElementById('price-min');
+    let priceMaxText = document.getElementById('price-max');
     progress = document.querySelector(".slider-body .slider-range");
 
     let priceGap = 20;
@@ -85,6 +87,8 @@ function showFilters(){
         input.addEventListener("input", e =>{
             let minVal = parseInt(rangeInput[0].value);
             let maxVal = parseInt(rangeInput[1].value);
+            priceMinVal = minVal;
+            priceMaxVal = maxVal;
 
             if(maxVal - minVal < priceGap){
                 if(e.target.className === "range-min"){
@@ -93,8 +97,8 @@ function showFilters(){
                     rangeInput[1].value = minVal+priceGap;
                 }
             }else{
-                priceMin.innerHTML = minVal.toString();
-                priceMax.innerHTML = maxVal.toString();
+                priceMinText.innerHTML = minVal.toString();
+                priceMaxText.innerHTML = maxVal.toString();
                 progress.style.left = (minVal/rangeInput[0].max) * 100 + "%";
                 progress.style.right = 100 - (maxVal/rangeInput[1].max) * 100 + "%";
             }
@@ -105,6 +109,26 @@ function showFilters(){
 
 //Back button to close out of the filters and reshow the items
 function showItems(){
+
+    let categoryCheckboxes = document.getElementsByName("category");
+    let brandCheckboxes = document.getElementsByName("brand");
+
+    let checkedCategories = [];
+    let checkedBrands = [];
+
+    for(let i = 0; i<categoryCheckboxes.length; i++){
+        if(categoryCheckboxes[i].checked){
+            checkedCategories.push(categoryCheckboxes[i].value);
+        }
+    }
+
+    for(let i = 0; i<brandCheckboxes.length; i++){
+        if(brandCheckboxes[i].checked){
+            checkedBrands.push(brandCheckboxes[i].value);
+        }
+    }
+
+
     items = document.querySelector('.items-container');
     search = document.querySelector('.filter-bar-search');
     sort = document.querySelector('.filter-bar-sort');
@@ -121,6 +145,11 @@ function showItems(){
 };
 
 
+document.addEventListener("DOMContentLoaded", function() {
+    let itemsDisplayed = document.getElementsByClassName("item-title");
+    let displayName = itemsDisplayed[0].innerHTML;
+    console.log(displayName);
+});
 
 //product details page - image carousel
 let slideIndex = 1;
