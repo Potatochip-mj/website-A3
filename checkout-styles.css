@@ -36,6 +36,11 @@
     margin: 20px 0 5px 0;
 }
 
+.checkout__items{
+    width: 900px;
+    position: relative;
+}
+
 .checkout__cards--shipping{
     display: flex;
     flex-direction: column;
@@ -45,6 +50,7 @@
     border-radius: 1.5rem;
     padding: 1rem 2rem 3rem 2rem;
     align-self: flex-start;
+    margin-left: 1rem;
 }
 
 .card-box{
@@ -64,7 +70,8 @@
     border-radius: 1.5rem;
     padding: 1rem 3rem 2rem 2rem;
     align-self: flex-start;
-    margin-bottom: 1.5rem;
+    justify-items: flex-end;
+    margin: 0 1.5rem 1.5rem 1.5rem;
 }
 
 .checkout__cards--discounts{
@@ -75,7 +82,9 @@
     background-color: #E1E1E1;
     border-radius: 1.5rem;
     padding: 1rem 3rem 1.5rem 2rem;
-    align-self: flex-start;
+    position: absolute;
+    bottom: 0;
+    right: 1.5rem;
 }
 
 .checkout__cards--discounts > .card-box{
@@ -187,21 +196,39 @@
     
     .checkout__items{
         flex-direction: column;
-        margin-left: 40px;
+        width: 100%;
+        margin: 0;
         gap: 1.5rem;
     }
 
-    .checkout__cards--shipping, .checkout__cards--payment, .checkout__cards--discounts{
-        width: 26rem;
+    .checkout-card{
+        width: 300px;
     }
 
-    .checkout__cards--payment, .checkout__cards--discounts{
-        padding-right: 2rem;
+    .checkout__cards--shipping > .card-box{
+        width: 300px;
+    }
+    
+    .checkout__cards--payment{
+        width: 300px;
+        margin-left: 1rem;
+        margin-bottom: 0;
+        padding: 1rem 3rem 2rem 1rem;
     }
 
-    .checkout__column-2{
-        margin: 0;
-        padding-left: 1.5rem;
+    .checkout__cards--discounts{
+        position: static;
+        padding: 1rem 3rem 1.5rem 1rem;
+        margin-left: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .checkout__cards--discounts >.card-box{
+        width: 330px;
+    }
+
+    .line--large{
+        width: 18.75rem;
     }
 
     .cart__cart-summary{
@@ -212,8 +239,12 @@
         bottom: 0;
     }
 
+    .cart-summary__text{
+        margin: 1rem;
+    }
+
     .cart-summary__btns{
         justify-items: flex-end;
-        margin: 2rem 3rem;
+        margin: 1rem;
     }
 }

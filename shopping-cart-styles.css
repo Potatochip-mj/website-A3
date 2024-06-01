@@ -64,7 +64,7 @@
 
 .cart-item--1{
     margin: 0 1rem 1.5rem 1rem;
-    background-color: aquamarine; /*this is just for layout purposes, remove when done*/
+    
     display: flex;
     width: 26.875rem;
     height: 12.5rem;
@@ -72,7 +72,7 @@
 
 .cart-item--2{
     margin: 0 1rem 1.5rem 1rem;
-    background-color: pink; /*this is just for layout purposes, remove when done*/
+    
     display: flex;
     width: 26.875rem;
     height: 12.5rem;
@@ -80,7 +80,7 @@
 
 .cart-item--3{
     margin: 0 1rem 1.5rem 1rem;
-    background-color: lightblue; /*this is just for layout purposes, remove when done*/
+    
     display: flex;
     width: 26.875rem;
     height: 12.5rem;
@@ -88,7 +88,7 @@
 
 .cart-item--4{
     margin: 0 1rem 1.5rem 1rem;
-    background-color: lightblue; /*this is just for layout purposes, remove when done*/
+    
     display: flex;
     width: 26.875rem;
     height: 12.5rem;
@@ -96,7 +96,7 @@
 
 .cart-item--5{
     margin: 0 1rem 1.5rem 1rem;
-    background-color: lightblue; /*this is just for layout purposes, remove when done*/
+    
     display: flex;
     width: 26.875rem;
     height: 12.5rem;
@@ -137,7 +137,26 @@
     .cart__items{
         flex-direction: column;
         justify-items: center;
-        margin-left: 70px;
+        margin-left: 10px;
+        width: 100%;
+    }
+
+    .column-1, .column-2{
+        width: 100%;
+    }
+
+    .cart-item{
+        width: 21.875rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .cart-item--img{
+        width: 150px;
+        height: 150px;
+    }
+
+    .cart-details{
+        width: 200px;
     }
 
     .cart__cart-summary{
@@ -148,8 +167,12 @@
         bottom: 0;
     }
 
+    .cart-summary__text{
+        margin: 1rem;
+    }
+
     .cart-summary__btns{
         justify-items: flex-end;
-        margin: 2rem 3rem;
+        margin: 1rem;
     }
 }
