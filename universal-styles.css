@@ -236,16 +236,6 @@ p{  /*this one is for normal text*/
     }
 }
 
-/*Style changes for mobile - will fix and add more after watching some lectures*/
-@media screen and (max-width: 390px) {
-    body{
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-        width: 600px;
-    }
-}
-
 
 /*NAV styling*/
 .nav-bar{
@@ -277,6 +267,10 @@ p{  /*this one is for normal text*/
     align-self: flex-start;
     margin: 0 1rem;
 } 
+
+.mobile-nav{
+    display: none;
+}
 
 /*FOOTER styling*/
 footer{
@@ -329,4 +323,37 @@ footer{
     max-width: 250px;
     align-self: center;
     margin: 1rem;
+}
+
+/*Basic page style changes for mobile resolution*/
+@media screen and (max-width: 390px) {
+    /*page set up*/
+    body{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        width: 600px;
+        
+    }
+
+    /*nav styling*/
+    .nav-buttons{
+       display: none; 
+    }
+
+    .mobile-nav{
+        display: flex;
+        width: 31px;
+        height: 32px;
+        margin: 1rem 2rem;
+    }
+
+    /*footer styling*/
+    .footer__socials{
+        width: 97.2px;
+        height: 27px;
+        padding-left: 450px;
+    }
+
+
 }
