@@ -22,11 +22,19 @@
             <a class="nav-btn" href="shopping-cart-index.html" target="_self"><h3>CART</h3></a>
             
         </div>
-
-        <div class="mobile-nav">
-            <img class="mobile-nav__hamburger" href="#" src="A3 images and stuff/hamburger menu icon.svg">
+        
+        <div class="mobile-nav"> <!--hamburger menu icon for mobile resolution-->
+            <a class="side-nav__open" onclick="openSideNav()"><img class="mobile-nav__hamburger" src="A3 images and stuff/hamburger menu icon.svg"></a>
         </div>
     </nav>
+
+    <div id="mySideNav" class="side-nav"> <!--Side bar nav for mobile resolution-->
+        <img class="nav-logo-home" src="A3 images and stuff/westec logo.svg">
+        <a class="side-nav__close" onclick="closeSideNav()"><img src="A3 images and stuff/x icon.png"></a>
+        <a class="side-nav__btn" href="home-page-index.html"><h3>HOME</h3></a>
+        <a class="side-nav__btn" href="products-index.html"><h3>PRODUCTS</h3></a>
+        <a class="side-nav__btn" href="shopping-cart-index.html"><h3>CART</h3></a>
+    </div>
 
     <div class="item-container cluster">
         <div class="item-container__carousel"> <!--container for the image carousel-->

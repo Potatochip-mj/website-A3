@@ -272,6 +272,11 @@ p{  /*this one is for normal text*/
     display: none;
 }
 
+.side-nav{
+    display: none;
+}
+
+
 /*FOOTER styling*/
 footer{
     display: flex;
@@ -348,12 +353,21 @@ footer{
         margin: 1rem 2rem;
     }
 
+    .side-nav{
+        display: flex;
+        height: 100%;
+        width: 100%;
+        z-index: 1;
+        background-color: #FFFFFF;
+        overflow-x: hidden;
+        
+    }
+
     /*footer styling*/
     .footer__socials{
         width: 97.2px;
         height: 27px;
         padding-left: 450px;
     }
-
 
 }
