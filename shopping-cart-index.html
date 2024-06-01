@@ -22,7 +22,19 @@
             <a class="nav-btn" href="products-index.html" target="_self"><h3>PRODUCTS</h3></a>
             <a class="nav-btn" href="shopping-cart-index.html" target="_self"><h3>CART</h3></a>
         </div>
+
+        <div class="mobile-nav">
+            <img class="mobile-nav__hamburger" href="#" src="A3 images and stuff/hamburger menu icon.svg">
+        </div>
     </nav>
+
+    <div id="mySideNav" class="side-nav"> <!--Side bar nav for mobile resolution-->
+        <img class="nav-logo-home" src="A3 images and stuff/westec logo.svg">
+        <a class="side-nav__close" onclick="closeSideNav()"><img src="A3 images and stuff/x-mark-xxl 1.svg"></a>
+        <a class="side-nav__btn" href="home-page-index.html"><h3>HOME</h3></a>
+        <a class="side-nav__btn" href="products-index.html"><h3>PRODUCTS</h3></a>
+        <a class="side-nav__btn" href="shopping-cart-index.html"><h3>CART</h3></a>
+    </div>
 
     <div class="page-heading">
         <h2 class="center-heading">SHOPPING CART</h2>
@@ -32,7 +44,7 @@
     <div class="cart cluster">
         <div class="cart__items">
             <div class="column-1">
-                <div class="cart-item--1">
+                <div class="cart-item cart-item--1">
                     <div class="box"> <!--when clicked the cart item should be removed from cart-->
                         <img class="delete-button" src="A3 images and stuff/delete button.svg">
                         <img class="cart-item--img" src="A3 images and stuff/sansai speaker 1.jpg">
@@ -50,14 +62,14 @@
                     </div>
                 </div>
         
-                <div class="cart-item--2">
+                <div class="cart-item cart-item--2">
                     <div class="box"> <!--when clicked the cart item should be removed from cart-->
                         <img class="delete-button" src="A3 images and stuff/delete button.svg">
                         <img class="cart-item--img" src="A3 images and stuff/cable image 1.jpg">
                     </div>
                     
                     <div class="cart-details">
-                        <p class="cart-details--name">MCDODO 100W 5A USB-C TO USB-C HIGH SPEED LEAD - 1.2M</p>
+                        <p class="cart-details--name">MCDODO 100W 5A USB-C TO USB-C - 1.2M</p>
                         <p class="cart-details--price">$16.95</p>
     
                         <div class="quantity-btn">
@@ -68,7 +80,7 @@
                     </div>
                 </div>
     
-                <div class="cart-item--3">
+                <div class="cart-item cart-item--3">
                     <div class="box"> <!--when clicked the cart item should be removed from cart-->
                         <img class="delete-button" src="A3 images and stuff/delete button.svg">
                         <img class="cart-item--img" src="A3 images and stuff/cart image placeholder.svg">
@@ -86,7 +98,7 @@
                     </div>
                 </div>
 
-                <div class="cart-item--5">
+                <div class="cart-item cart-item--5">
                     <div class="box"> <!--when clicked the cart item should be removed from cart-->
                         <img class="delete-button" src="A3 images and stuff/delete button.svg">
                         <img class="cart-item--img" src="A3 images and stuff/cart image placeholder.svg">
@@ -106,7 +118,7 @@
             </div>
             
             <div class="column-2">
-                <div class="cart-item--4">
+                <div class="cart-item cart-item--4">
                     <div class="box"> <!--when clicked the cart item should be removed from cart-->
                         <img class="delete-button" src="A3 images and stuff/delete button.svg">
                         <img class="cart-item--img" src="A3 images and stuff/cart image placeholder.svg">
@@ -124,25 +136,7 @@
                     </div>
                 </div>
     
-                <div class="cart-item--5">
-                    <div class="box"> <!--when clicked the cart item should be removed from cart-->
-                        <img class="delete-button" src="A3 images and stuff/delete button.svg">
-                        <img class="cart-item--img" src="A3 images and stuff/cart image placeholder.svg">
-                    </div>
-                   
-                    <div class="cart-details">
-                        <p class="cart-details--name">PRODUCT NAME</p>
-                        <p class="cart-details--price">$XX.XX</p>
-    
-                        <div class="quantity-btn">
-                            <button class="qty-count qty-count--minus" type="button">-</button>
-                            <p class="product-qty">1</p>
-                            <button class="qty-count qty-count--add" type="button" onclick="addOne()">+</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="cart-item--5">
+                <div class="cart-item cart-item--5">
                     <div class="box"> <!--when clicked the cart item should be removed from cart-->
                         <img class="delete-button" src="A3 images and stuff/delete button.svg">
                         <img class="cart-item--img" src="A3 images and stuff/cart image placeholder.svg">
@@ -160,7 +154,25 @@
                     </div>
                 </div>
 
-                <div class="cart-item--5">
+                <div class="cart-item cart-item--5">
+                    <div class="box"> <!--when clicked the cart item should be removed from cart-->
+                        <img class="delete-button" src="A3 images and stuff/delete button.svg">
+                        <img class="cart-item--img" src="A3 images and stuff/cart image placeholder.svg">
+                    </div>
+                   
+                    <div class="cart-details">
+                        <p class="cart-details--name">PRODUCT NAME</p>
+                        <p class="cart-details--price">$XX.XX</p>
+    
+                        <div class="quantity-btn">
+                            <button class="qty-count qty-count--minus" type="button">-</button>
+                            <p class="product-qty">1</p>
+                            <button class="qty-count qty-count--add" type="button" onclick="addOne()">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cart-item cart-item--5">
                     <div class="box"> <!--when clicked the cart item should be removed from cart-->
                         <img class="delete-button" src="A3 images and stuff/delete button.svg">
                         <img class="cart-item--img" src="A3 images and stuff/cart image placeholder.svg">

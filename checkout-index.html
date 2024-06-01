@@ -21,6 +21,10 @@
             <a class="nav-btn" href="product-page-index.html" target="_self"><h3>PRODUCTS</h3></a>
             <a class="nav-btn" href="shopping-cart-index.html" target="_self"><h3>CART</h3></a>
         </div>
+        
+        <div class="mobile-nav">
+            <img class="mobile-nav__hamburger" href="#" src="A3 images and stuff/hamburger menu icon.svg">
+        </div>
     </nav>
 
     <div class="page-heading">
@@ -30,80 +34,76 @@
 
     <div class="checkout cluster">
         <div class="checkout__items">
-            <div class="checkout__column-1">
-                <div class="checkout__cards--shipping">
-                    <div class="card-box">
-                        <p class="card-heading"><b>Shipping</b></p>
-                        <a href="#" target="_self" class="btn btn--primary pickup">In-store Pickup</a>
+            <div class="checkout-card checkout__cards--shipping">
+                <div class="card-box">
+                    <p class="card-heading"><b>Shipping</b></p>
+                    <a href="#" target="_self" class="btn btn--primary pickup">In-store Pickup</a>
+                </div>
+                <label class="input-label" for="address-line-1">Address Line 1</label>
+                <input class="line--large" type="text" name="address-line-1">
+                <label class="input-label" for="address-line-2">Address Line 2</label>
+                <input class="line--large" type="text" name="address-line-2">
+                <label class="input-label" for="suburb">Suburb</label>
+                <input class="line--medium" type="text" name="suburb">
+                <label class="input-label" for="city">City</label>
+                <input class="line--medium" type="text" name="city">
+                <div class="state-code">
+                    <div class="state-code--inner">
+                        <label class="input-label" for="state">State</label>
+                        <input class="line--small" type="text" name="state">
+                    </div> 
+                    <div class="state-code--inner">
+                        <label class="input-label" for="postcode">Postcode</label>
+                        <input class="line--small" type="text" name="postcode">
                     </div>
-                    <label class="input-label" for="address-line-1">Address Line 1</label>
-                    <input class="line--large" type="text" name="address-line-1">
-                    <label class="input-label" for="address-line-2">Address Line 2</label>
-                    <input class="line--large" type="text" name="address-line-2">
-                    <label class="input-label" for="suburb">Suburb</label>
-                    <input class="line--medium" type="text" name="suburb">
-                    <label class="input-label" for="city">City</label>
-                    <input class="line--medium" type="text" name="city">
-                    <div class="state-code">
-                        <div class="state-code--inner">
-                            <label class="input-label" for="state">State</label>
-                            <input class="line--small" type="text" name="state">
-                        </div> 
-                        <div class="state-code--inner">
-                            <label class="input-label" for="postcode">Postcode</label>
-                            <input class="line--small" type="text" name="postcode">
-                        </div>
-                    </div>
-                    
-                    <div class="calculated-cost">
-                        <label class="input-label" for="calculated-shipping-cost">Calculated Shipping Cost</label>
-                        <div class="fixed-input" name="calculated-shipping-cost"><p><b>$XYZ.00</b></p></div>
-                    </div>
+                </div>
+                
+                <div class="calculated-cost">
+                    <label class="input-label" for="calculated-shipping-cost">Calculated Shipping Cost</label>
+                    <div class="fixed-input" name="calculated-shipping-cost"><p><b>$XYZ.00</b></p></div>
                 </div>
             </div>
-    
-            <div class="checkout__column-2">
-                <div class="checkout__cards--payment">
-                    <p class="card-heading"><b>Payment</b></p>
-                    <label class="input-label" for="card-number">Card Number</label>
-                    <input class="line--large" type="text" name="card-number">
-                    <label class="input-label" for="card-name">Name on Card</label>
-                    <input class="line--large" type="text" name="card-name">
-                    <label class="input-label" for="security-code">Security Code</label>
-                    <input class="line--small" type="text" name="security-code">
-                </div>
 
-                <div class="checkout__cards--discounts">
-                    <p class="card-heading"><b>Discounts</b></p>
-                    <div class="card-box">
-                        <div class="discount-inner">
-                            <label class="input-label" for="discount">Discount Code</label>
-                            <input class="line--medium" type="text" name="discount">
-                        </div>
-                        <a href="#" target="_self" class="btn btn--primary apply">Apply</a>
+            <div class="checkout-card checkout__cards--payment">
+                <p class="card-heading"><b>Payment</b></p>
+                <label class="input-label" for="card-number">Card Number</label>
+                <input class="line--large" type="text" name="card-number">
+                <label class="input-label" for="card-name">Name on Card</label>
+                <input class="line--large" type="text" name="card-name">
+                <label class="input-label" for="security-code">Security Code</label>
+                <input class="line--small" type="text" name="security-code">
+            </div>
+
+            <div class="checkout-card checkout__cards--discounts">
+                <p class="card-heading"><b>Discounts</b></p>
+                <div class="card-box">
+                    <div class="discount-inner">
+                        <label class="input-label" for="discount">Discount Code</label>
+                        <input class="line--medium" type="text" name="discount">
                     </div>
-                    
-                    <div class="calculated-cost">
-                        <label class="input-label" for="calculated-discount">Amounted Discounted</label>
-                        <div class="fixed-input" name="calculated-discount"><p><b>$XYZ.00</b></p></div>
-                    </div>
+                    <a class="btn btn--primary apply">Apply</a> <!--should turn into "Applied" when clicked-->
+                </div>
+                
+                <div class="calculated-cost">
+                    <label class="input-label" for="calculated-discount">Amounted Discounted</label>
+                    <div class="fixed-input" name="calculated-discount"><p><b>$XYZ.00</b></p></div>
                 </div>
             </div>
             
-            
-            <div class="cart__cart-summary">
-                <div class="cart-summary__text">
-                    <h2><b>TOTAL $$</b></h2>
-                    <p>No. of Items in Cart: <b>XYZ</b></p>
-                </div>
-    
-                <div class="cart-summary__btns">
-                    <a href="confirmation-index.html" target="_self" class="btn btn--primary">Confirm</a> <!--takes you to confirmation page-->
-                    <a href="shopping-cart-index.html" target="_self" class="btn btn--accent-2">Back</a> <!--takes you to cart-->
-                </div>
-            </div>
         </div>
         
+        <div class="cart__cart-summary">
+            <div class="cart-summary__text">
+                <h2><b>TOTAL $$</b></h2>
+                <p>No. of Items in Cart: <b>XYZ</b></p>
+            </div>
+
+            <div class="cart-summary__btns">
+                <a href="confirmation-index.html" target="_self" class="btn btn--primary">Confirm</a> <!--takes you to confirmation page-->
+                <a href="shopping-cart-index.html" target="_self" class="btn btn--accent-2">Back</a> <!--takes you to cart-->
+            </div>
+        </div>
+
     </div>
     
 </body>

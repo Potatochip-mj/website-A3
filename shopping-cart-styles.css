@@ -5,6 +5,7 @@
 
 .cart__items{
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     margin: 2.5rem 0 0 0.5rem;
 }
@@ -63,7 +64,7 @@
 
 .cart-item--1{
     margin: 0 1rem 1.5rem 1rem;
-    background-color: aquamarine; /*this is just for layout purposes, remove when done*/
+    
     display: flex;
     width: 26.875rem;
     height: 12.5rem;
@@ -71,7 +72,7 @@
 
 .cart-item--2{
     margin: 0 1rem 1.5rem 1rem;
-    background-color: pink; /*this is just for layout purposes, remove when done*/
+    
     display: flex;
     width: 26.875rem;
     height: 12.5rem;
@@ -79,7 +80,7 @@
 
 .cart-item--3{
     margin: 0 1rem 1.5rem 1rem;
-    background-color: lightblue; /*this is just for layout purposes, remove when done*/
+    
     display: flex;
     width: 26.875rem;
     height: 12.5rem;
@@ -87,7 +88,7 @@
 
 .cart-item--4{
     margin: 0 1rem 1.5rem 1rem;
-    background-color: lightblue; /*this is just for layout purposes, remove when done*/
+    
     display: flex;
     width: 26.875rem;
     height: 12.5rem;
@@ -95,7 +96,7 @@
 
 .cart-item--5{
     margin: 0 1rem 1.5rem 1rem;
-    background-color: lightblue; /*this is just for layout purposes, remove when done*/
+    
     display: flex;
     width: 26.875rem;
     height: 12.5rem;
@@ -127,4 +128,51 @@
 
 .cart-summary__btns > .btn--primary{
     margin: 1rem 0 1rem 0;
+}
+
+
+/*mobile resolution styling*/
+@media screen and (max-width: 390px){
+    
+    .cart__items{
+        flex-direction: column;
+        justify-items: center;
+        margin-left: 10px;
+        width: 100%;
+    }
+
+    .column-1, .column-2{
+        width: 100%;
+    }
+
+    .cart-item{
+        width: 21.875rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .cart-item--img{
+        width: 150px;
+        height: 150px;
+    }
+
+    .cart-details{
+        width: 200px;
+    }
+
+    .cart__cart-summary{
+        display: flex;
+        width: 100%;
+        height: 12.5rem;
+        position: sticky;
+        bottom: 0;
+    }
+
+    .cart-summary__text{
+        margin: 1rem;
+    }
+
+    .cart-summary__btns{
+        justify-items: flex-end;
+        margin: 1rem;
+    }
 }
