@@ -89,12 +89,29 @@ const products = [
 let priceMinVal = 0;
 let priceMaxVal = 500;
 let itemsDisplayed = [];
+let searchBar;
 
 document.addEventListener("DOMContentLoaded", function() {
 
     itemsDisplayed = document.querySelectorAll(".item.cluster");
+    searchBar = document.querySelector(".search-bar");
+
+    
+    searchBar.addEventListener("input", function(event){
+        const userInput = event.target.value.trim().toLowerCase();
+        itemsDisplayed.forEach(function(itemDisplayed){
+            let itemTitle = itemDisplayed.querySelector('.item-title').innerHTML;
+            if (itemTitle.trim().toLowerCase().includes(userInput)) {
+                itemDisplayed.style.display = 'flex';
+            }else{
+                itemDisplayed.style.display = 'none';
+            }
+        });
+    })
 
 });
+
+
 
 //Button for the products list page to show all the filters
 function showFilters(){
@@ -207,6 +224,7 @@ function showItems(){
         }
     }
 
+
     loop3:
     for(let i = 0; i<itemsToDisplay.length; i++){
         loop4:
@@ -223,14 +241,23 @@ function showItems(){
         }
     }
 
-    itemsDisplayed.forEach(function(itemDisplayed){
-        let itemTitle = itemDisplayed.querySelector('.item-title').innerHTML;
-        for(let i = 0; i<itemsToDisplay.length; i++){
-            if (!itemsToDisplay.includes(itemTitle)) {
-                itemDisplayed.style.display = 'none';
+    if(itemsToDisplay.length == 0){
+        itemsDisplayed.forEach(function(itemDisplayed){
+            itemDisplayed.style.display = 'none';
+        })
+    }else{
+        itemsDisplayed.forEach(function(itemDisplayed){
+            let itemTitle = itemDisplayed.querySelector('.item-title').innerHTML;
+            for(let i = 0; i<itemsToDisplay.length; i++){
+                if (!itemsToDisplay.includes(itemTitle)) {
+                    itemDisplayed.style.display = 'none';
+                }else{
+                    itemDisplayed.style.display = 'flex';
+                }
             }
-        }
-    });
+        });
+    }
+
 
 
     items = document.querySelector('.items-container');
@@ -249,13 +276,6 @@ function showItems(){
 
 
 };
-
-
-document.addEventListener("DOMContentLoaded", function() {
-    let itemsDisplayed = document.getElementsByClassName("item-title");
-    let displayName = itemsDisplayed[0].innerHTML;
-    console.log(displayName);
-});
 
 
 //PRODUCT PAGE script
