@@ -5,6 +5,7 @@
 const products = [
 
     {
+        qtyId: 1,
         shortName: "Sansai Speaker",
         longName: "SANSAI 20W TWS BLUETOOTH SPEAKER WITH LED LIGHTS",
         price: 84.70,
@@ -12,6 +13,7 @@ const products = [
         brand: "Sansai"
     },
     {
+        qtyId: 2,
         shortName: "Denon Speaker",
         longName: "DENON HOME 150 WIRELESS HEOS BLUETOOTH SPEAKER",
         price: 280.00,
@@ -19,6 +21,7 @@ const products = [
         brand: "Denon"
     },
     {
+        qtyId: 3,
         shortName: "Mcdodo Cable",
         longName: "MCDODO 100W 5A USB-C TO USB-C HIGH SPEED LEAD - 1.2M",
         price: 24.00,
@@ -26,6 +29,7 @@ const products = [
         brand: "Mcdodo"
     },
     {
+        qtyId: 4,
         shortName: "Mcdodo Charger",
         longName: "MCDODO 3A RIGHT ANGLE USB TO RIGHT ANGLE LIGHTNING LEAD - 3M",
         price: 24.00,
@@ -33,6 +37,7 @@ const products = [
         brand: "Mcdodo"
     },
     {
+        qtyId: 5,
         shortName: "Tp-Link Port",
         longName: "TP-LINK 5 PORT NETWORK SWITCH HUB",
         price: 22.00,
@@ -40,6 +45,7 @@ const products = [
         brand: "Tp-Link"
     },
     {
+        qtyId: 6,
         shortName: "Sansai Remote",
         longName: "SANSAI 8 IN 1 UNIVERSAL REMOTE CONTROL WITH LEARNING FUNCTION",
         price: 26.95,
@@ -47,6 +53,7 @@ const products = [
         brand: "Sansai"
     },
     {
+        qtyId: 7,
         shortName: "Sonken Microphone",
         longName: "SONKEN 2CH WIRELESS MICROPHONE RECEIVER WITH 2 MICS INCLUDED",
         price: 400.00,
@@ -54,6 +61,7 @@ const products = [
         brand: "Sonken"
     },
     {
+        qtyId: 8,
         shortName: "Koss Headset",
         longName: "KOSS BUDGET ON EAR STEREO HEADPHONES - BLACK",
         price: 70.00,
@@ -61,6 +69,7 @@ const products = [
         brand: "Koss"
     },
     {
+        qtyId: 9,
         shortName: "Westec Headset",
         longName: "WESTEC KIDS 85DB RECHARGEABLE BLUETOOTH HEADPHONES - PURPLE",
         price: 59.00,
@@ -68,6 +77,7 @@ const products = [
         brand: "Westec"
     },
     {
+        qtyId: 10,
         shortName: "Mcdodo Power Bank",
         longName: "MCDODO 10,000MAH POWER BANK - 2x QC3.0 USB + 1x PD TYPE-C OUTPUTS",
         price: 39.00,
@@ -323,8 +333,15 @@ for (i = 0; i < accordion.length; i++){
 
 //Product details page - quantity button
 //onclick for increase product quantity
-function addOne(){
-    let productQuantity = document.getElementsByClassName("product-qty")[0]; //changed "single-product-qty" back to "product-qty" here and in the HTML
+function addOne(id){
+    /*let id = this.getAttribute('id');
+    let valueID = id.split("-");
+    let textID = valueID[0] + "-" + valueID[1] + "-" + valueID[2] + "-value";
+    
+    */
+
+    let textID = "product-qty-" + id + "-value";
+    let productQuantity = document.getElementById(textID);
     let qtyMin = parseInt(productQuantity.getAttribute("min"));
     let qtyMax = parseInt(productQuantity.getAttribute("max"));
     let qtyValue = parseInt(productQuantity.getAttribute("value"));
@@ -337,8 +354,10 @@ function addOne(){
 }
 
 //onclick for decrease product quantity
-function minusOne(){
-    let productQuantity = document.getElementsByClassName("product-qty")[0]; //changed "single-product-qty" back to "product-qty" here and in the HTML
+function minusOne(id){
+    let textID = "product-qty-" + id + "-value";
+    let productQuantity = document.getElementById(textID);
+
     let qtyMin = parseInt(productQuantity.getAttribute("min"));
     let qtyMax = parseInt(productQuantity.getAttribute("max"));
     let qtyValue = parseInt(productQuantity.getAttribute("value"));
@@ -348,4 +367,23 @@ function minusOne(){
         productQuantity.setAttribute("value", qtyValue.toString());
         //productQuantity[0].innerHTML = "<p>{qty}</p>";
     }
+}
+
+
+//add to cart button
+function addCart(){
+    let addButton = document.getElementById("addBtn");
+    addButton.innerHTML = "<a>Added</a>";
+}
+
+
+
+//side nav overlay functions
+
+function openSideNav(){
+    document.getElementById("mySideNav").style.width = "250px";
+}
+
+function closeSideNav(){
+    document.getElementById("mySideNav").style.width = "0";
 }

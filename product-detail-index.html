@@ -8,7 +8,7 @@
     <script src="universal-script.js"></script>
     <title>Products Detail</title>
 </head>
-<body>
+<body onload="showSlides()">
     <nav class="nav-bar cluster">
         <div class="Westec-logo cluster">
             <a href="home-page-index.html" target="_self">
@@ -31,7 +31,7 @@
         <div class="item-container__carousel"> <!--container for the image carousel-->
             <div class="carousel-box">
                 <img class="item-container__img" src="A3 images and stuff/sansai speaker 1.jpg">
-                <img class="item-container__img" src="A3 images and stuff/sansai speaker 2 ver. 2.webp">
+                <img class="item-container__img" src="A3 images and stuff/sansai speaker ver. 3.jpg">
                 <img class="prev" onclick="plusSlides(-1)" src="A3 images and stuff/🦆 icon _chevron left_.svg">
                 <img class="next" onclick="plusSlides(1)" src="A3 images and stuff/🦆 icon _chevron right_.svg">
                 <div class="ellipsis">
@@ -55,7 +55,7 @@
                 </div>
                 
                 <div class="item-container__btns">
-                    <a href="#" class="btn btn--primary">Add to Cart</a> 
+                    <a class="btn btn--primary" id="addBtn" onclick="addCart()">Add to Cart</a> 
                     <a href="products-index.html" class="btn btn--accent-1">Back</a> 
                 </div>
             </div>
