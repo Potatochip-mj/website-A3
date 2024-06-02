@@ -401,9 +401,17 @@ function addCart(){
 //side nav overlay functions
 
 function openSideNav(){
+    document.getElementById("side-nav__open").style.display = "none";
+    
+    document.getElementById("side-nav__close").style.display = "block";
+    
     document.getElementById("mySideNav").style.width = "250px";
 }
 
 function closeSideNav(){
+    document.getElementById("side-nav__open").style.display = "block";
+    
+    document.getElementById("side-nav__close").style.display = "none";
+    
     document.getElementById("mySideNav").style.width = "0";
 }

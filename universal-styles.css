@@ -349,7 +349,8 @@ footer{
         
     }
 
-    /*nav styling*/
+    /*side nav overlay styling*/
+    
     .nav-buttons{
        display: none; 
     }
@@ -363,8 +364,8 @@ footer{
 
     .side-nav{
         display: flex;
-        height: 100%;
-        width: 390px;
+        height: 844px;
+        width: 100%;
         z-index: 1;
         background-color: #FFFFFF;
         overflow-x: hidden;
@@ -375,7 +376,8 @@ footer{
         display: flex;
         flex-direction: column;
         width: 390px;
-        height: 200px;
+        height: 100%;
+        position: relative;
     }
 
     .side-nav__btn{
@@ -386,17 +388,14 @@ footer{
         line-height: 50px;
         margin-right: 2rem;
     }
-
-    .side-nav__close{
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 37px;
-        height: 37px;
-        margin: 1.5rem 2rem;
+    
+    
+    #side-nav__close{
+        display: none;
+       
     }
 
-    .side-nav__btn, .side-nav__close:hover{
+    .side-nav__btn, #side-nav__close:hover{
         color: #6F11A8;
     }
 
