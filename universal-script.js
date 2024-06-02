@@ -5,60 +5,84 @@
 const products = [
 
     {
-        shortName: "Sansai Bluetooth Speaker",
+        shortName: "Sansai Speaker",
         longName: "SANSAI 20W TWS BLUETOOTH SPEAKER WITH LED LIGHTS",
-        price: 84.70
-        
+        price: 84.70,
+        category: "Speakers",
+        brand: "Sansai"
     },
     {
-        shortName: "Denon Bluetooth Speaker",
+        shortName: "Denon Speaker",
         longName: "DENON HOME 150 WIRELESS HEOS BLUETOOTH SPEAKER",
-        price: 280.00
+        price: 280.00,
+        category: "Speakers",
+        brand: "Denon"
     },
     {
         shortName: "Mcdodo Cable",
         longName: "MCDODO 100W 5A USB-C TO USB-C HIGH SPEED LEAD - 1.2M",
-        price: 24.00
+        price: 24.00,
+        category: "Cables",
+        brand: "Mcdodo"
     },
     {
         shortName: "Mcdodo Charger",
         longName: "MCDODO 3A RIGHT ANGLE USB TO RIGHT ANGLE LIGHTNING LEAD - 3M",
-        price: 24.00
+        price: 24.00,
+        category: "Chargers",
+        brand: "Mcdodo"
     },
     {
         shortName: "Tp-Link Port",
         longName: "TP-LINK 5 PORT NETWORK SWITCH HUB",
-        price: 22.00
+        price: 22.00,
+        category: "Ports",
+        brand: "Tp-Link"
     },
     {
         shortName: "Sansai Remote",
         longName: "SANSAI 8 IN 1 UNIVERSAL REMOTE CONTROL WITH LEARNING FUNCTION",
-        price: 26.95
+        price: 26.95,
+        category: "Remotes",
+        brand: "Sansai"
     },
     {
         shortName: "Sonken Microphone",
         longName: "SONKEN 2CH WIRELESS MICROPHONE RECEIVER WITH 2 MICS INCLUDED",
-        price: 400.00
+        price: 400.00,
+        category: "Microphones",
+        brand: "Sonken"
     },
     {
         shortName: "Koss Headset",
         longName: "KOSS BUDGET ON EAR STEREO HEADPHONES - BLACK",
-        price: 70.00
+        price: 70.00,
+        category: "Headsets",
+        brand: "Koss"
     },
     {
         shortName: "Westec Headset",
         longName: "WESTEC KIDS 85DB RECHARGEABLE BLUETOOTH HEADPHONES - PURPLE",
-        price: 59.00
+        price: 59.00,
+        category: "Headsets",
+        brand: "Westec"
     },
     {
         shortName: "Mcdodo Power Bank",
         longName: "MCDODO 10,000MAH POWER BANK - 2x QC3.0 USB + 1x PD TYPE-C OUTPUTS",
-        price: 39.00
+        price: 39.00,
+        category: "Chargers",
+        brand: "Mcdodo"
     }
 ];
 
 let priceMinVal, priceMaxVal;
 
+document.addEventListener("DOMContentLoaded", function() {
+
+    let itemsDisplayed = document.querySelectorAll(".item.cluster");
+
+});
 
 //Button for the products list page to show all the filters
 function showFilters(){
@@ -113,8 +137,7 @@ function showItems(){
     let categoryCheckboxes = document.getElementsByName("category");
     let brandCheckboxes = document.getElementsByName("brand");
 
-    let checkedCategories = [];
-    let checkedBrands = [];
+    let checkedCategories = [], checkedBrands = [], itemsToDisplay = [];
 
     for(let i = 0; i<categoryCheckboxes.length; i++){
         if(categoryCheckboxes[i].checked){
@@ -128,6 +151,52 @@ function showItems(){
         }
     }
 
+    for(let i = 0; i<checkedBrands.length; i++){
+        for(let a = 0; a<products.length; a++){
+            if(products[a].brand == checkedBrands[i]){
+                itemsToDisplay.push(products[a].shortName);
+            }
+        }
+    }
+
+    for(let i = 0; i<checkedCategories.length; i++){
+        loop1:
+        for(let a = 0; a<products.length; a++){
+            if(products[a].category == checkedCategories[i]){
+                for(let u = 0; u<checkedBrands.length; u++){
+                    if(products[a].brand !== checkedBrands[u]){
+                        continue loop1;
+                    }
+                }
+                for(let x = 0; x<itemsToDisplay.length; x++){
+                    if(products[a].shortName == itemsToDisplay[x]){
+                        continue loop1;
+                    }else if(x == itemsToDisplay.length - 1 && products[a] !== itemsToDisplay[x]){
+                        itemsToDisplay.push(products[a].shortName);
+                    }
+                }
+            }
+        }
+    }
+
+    loop2:
+    for(let i = 0; i<itemsToDisplay.length; i++){
+        for(let a = 0; a<products.length; a++){
+            if(itemsToDisplay[i] == products[a].shortName){
+                for(let x = 0; x<checkedCategories.length; x++){
+                    if(products[a].category == checkedCategories[x]){
+                        continue loop2; 
+                    }
+                    if(x == checkedCategories.length - 1){
+                        itemsToDisplay.splice(i, 1);
+                    }
+                }
+            }
+        }
+    }
+
+
+    console.log(itemsToDisplay);
 
     items = document.querySelector('.items-container');
     search = document.querySelector('.filter-bar-search');
@@ -143,13 +212,6 @@ function showItems(){
     backButton.style.display = 'none';
     filters.style.display = 'none';
 };
-
-
-document.addEventListener("DOMContentLoaded", function() {
-    let itemsDisplayed = document.getElementsByClassName("item-title");
-    let displayName = itemsDisplayed[0].innerHTML;
-    console.log(displayName);
-});
 
 //product details page - image carousel
 let slideIndex = 1;
