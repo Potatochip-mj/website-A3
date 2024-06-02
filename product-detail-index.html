@@ -59,9 +59,9 @@
                     <p class="item-details--price">$75.00</p>
     
                     <div class="quantity-btn--product-detail">
-                        <button class="qty-count qty-count--minus" type="button">-</button>
-                        <p class="product-qty">1</p>
-                        <button class="qty-count qty-count--add" type="button">+</button>
+                        <button id="product-qty-1-minus" class="qty-count qty-count--minus" type="button" onclick="minusOne(id)">-</button>
+                        <input id="product-qty-1-value" min="0" max="10" value="1" class="product-qty" type="number">
+                        <button id="product-qty-1-add" class="qty-count qty-count--add" type="button" onclick="addOne(id)">+</button>
                     </div>
                 </div>
                 

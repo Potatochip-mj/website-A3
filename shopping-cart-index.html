@@ -54,10 +54,10 @@
                         <p class="cart-details--name">SANSAI 20W TWS BLUETOOTH SPEAKER</p>
                         <p class="cart-details--price">$75.00</p>
                         
-                        <div class="quantity-btn">
-                            <button class="qty-count qty-count--minus" type="button">-</button>
-                            <p class="product-qty">1</p>
-                            <button class="qty-count qty-count--add" type="button">+</button>
+                        <div class="quantity-btn--cart">
+                            <button id="product-qty-1-minus" class="qty-count qty-count--minus" type="button" onclick="minusOne(id)">-</button>
+                            <input id="product-qty-1-value" min="0" max="10" value="1" class="product-qty single-product-qty" type="number">
+                            <button id="product-qty-1-add" class="qty-count qty-count--add" type="button" onclick="addOne(id)">+</button>
                         </div>
                     </div>
                 </div>
@@ -72,10 +72,10 @@
                         <p class="cart-details--name">MCDODO 100W 5A USB-C TO USB-C - 1.2M</p>
                         <p class="cart-details--price">$16.95</p>
     
-                        <div class="quantity-btn">
-                            <button class="qty-count qty-count--minus" type="button">-</button>
-                            <p class="product-qty">1</p>
-                            <button class="qty-count qty-count--add" type="button">+</button>
+                        <div class="quantity-btn--cart">
+                            <button id="product-qty-2-minus" class="qty-count qty-count--minus" type="button" onclick="minusOne(id)">-</button>
+                            <input id="product-qty-2-value" min="0" max="10" value="1" class="product-qty single-product-qty" type="number">
+                            <button id="product-qty-2-add" class="qty-count qty-count--add" type="button" onclick="addOne(id)">+</button>
                         </div>
                     </div>
                 </div>
@@ -90,10 +90,10 @@
                         <p class="cart-details--name">PRODUCT NAME</p>
                         <p class="cart-details--price">$XX.XX</p>
     
-                        <div class="quantity-btn">
-                            <button class="qty-count qty-count--minus" type="button">-</button>
-                            <p class="product-qty">1</p>
-                            <button class="qty-count qty-count--add" type="button" onclick="addOne()">+</button>
+                        <div class="quantity-btn--cart">
+                            <button id="product-qty-3-minus" class="qty-count qty-count--minus" type="button" onclick="minusOne(id)">-</button>
+                            <input id="product-qty-3-value" min="0" max="10" value="1" class="product-qty single-product-qty" type="number">
+                            <button id="product-qty-3-add" class="qty-count qty-count--add" type="button" onclick="addOne(id)">+</button>
                         </div>
                     </div>
                 </div>
@@ -108,10 +108,10 @@
                         <p class="cart-details--name">PRODUCT NAME</p>
                         <p class="cart-details--price">$XX.XX</p>
     
-                        <div class="quantity-btn">
-                            <button class="qty-count qty-count--minus" type="button">-</button>
-                            <p class="product-qty">1</p>
-                            <button class="qty-count qty-count--add" type="button" onclick="addOne()">+</button>
+                        <div class="quantity-btn--cart">
+                            <button id="product-qty-4-minus" class="qty-count qty-count--minus" type="button" onclick="minusOne(id)">-</button>
+                            <input id="product-qty-4-value" min="0" max="10" value="1" class="product-qty single-product-qty" type="number">
+                            <button id="product-qty-4-add" class="qty-count qty-count--add" type="button" onclick="addOne(id)">+</button>
                         </div>
                     </div>
                 </div>
@@ -128,10 +128,10 @@
                         <p class="cart-details--name">PRODUCT NAME</p>
                         <p class="cart-details--price">$XX.XX</p>
     
-                        <div class="quantity-btn">
-                            <button class="qty-count qty-count--minus" type="button">-</button>
-                            <p class="product-qty">1</p>
-                            <button class="qty-count qty-count--add" type="button" onclick="addOne()">+</button>
+                        <div class="quantity-btn--cart">
+                            <button id="product-qty-5-minus" class="qty-count qty-count--minus" type="button" onclick="minusOne(id)">-</button>
+                            <input id="product-qty-5-value" min="0" max="10" value="1" class="product-qty single-product-qty" type="number">
+                            <button id="product-qty-5-add" class="qty-count qty-count--add" type="button" onclick="addOne(id)">+</button>
                         </div>
                     </div>
                 </div>
@@ -146,28 +146,10 @@
                         <p class="cart-details--name">PRODUCT NAME</p>
                         <p class="cart-details--price">$XX.XX</p>
     
-                        <div class="quantity-btn">
-                            <button class="qty-count qty-count--minus" type="button">-</button>
-                            <p class="product-qty">1</p>
-                            <button class="qty-count qty-count--add" type="button" onclick="addOne()">+</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="cart-item cart-item--5">
-                    <div class="box"> <!--when clicked the cart item should be removed from cart-->
-                        <img class="delete-button" src="A3 images and stuff/delete button.svg">
-                        <img class="cart-item--img" src="A3 images and stuff/cart image placeholder.svg">
-                    </div>
-                   
-                    <div class="cart-details">
-                        <p class="cart-details--name">PRODUCT NAME</p>
-                        <p class="cart-details--price">$XX.XX</p>
-    
-                        <div class="quantity-btn">
-                            <button class="qty-count qty-count--minus" type="button">-</button>
-                            <p class="product-qty">1</p>
-                            <button class="qty-count qty-count--add" type="button" onclick="addOne()">+</button>
+                        <div class="quantity-btn--cart">
+                            <button id="product-qty-6-minus" class="qty-count qty-count--minus" type="button" onclick="minusOne(id)">-</button>
+                            <input id="product-qty-6-value" min="0" max="10" value="1" class="product-qty single-product-qty" type="number">
+                            <button id="product-qty-6-add" class="qty-count qty-count--add" type="button" onclick="addOne(id)">+</button>
                         </div>
                     </div>
                 </div>
@@ -182,10 +164,28 @@
                         <p class="cart-details--name">PRODUCT NAME</p>
                         <p class="cart-details--price">$XX.XX</p>
     
-                        <div class="quantity-btn">
-                            <button class="qty-count qty-count--minus" type="button">-</button>
-                            <p class="product-qty">1</p>
-                            <button class="qty-count qty-count--add" type="button" onclick="addOne()">+</button>
+                        <div class="quantity-btn--cart">
+                            <button id="product-qty-7-minus" class="qty-count qty-count--minus" type="button" onclick="minusOne(id)">-</button>
+                            <input id="product-qty-7-value" min="0" max="10" value="1" class="product-qty single-product-qty" type="number">
+                            <button id="product-qty-7-add" class="qty-count qty-count--add" type="button" onclick="addOne(id)">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cart-item cart-item--5">
+                    <div class="box"> <!--when clicked the cart item should be removed from cart-->
+                        <img class="delete-button" src="A3 images and stuff/delete button.svg">
+                        <img class="cart-item--img" src="A3 images and stuff/cart image placeholder.svg">
+                    </div>
+                   
+                    <div class="cart-details">
+                        <p class="cart-details--name">PRODUCT NAME</p>
+                        <p class="cart-details--price">$XX.XX</p>
+    
+                        <div class="quantity-btn--cart">
+                            <button id="product-qty-8-minus" class="qty-count qty-count--minus" type="button" onclick="minusOne(id)">-</button>
+                            <input id="product-qty-8-value" min="0" max="10" value="1" class="product-qty single-product-qty" type="number">
+                            <button id="product-qty-8-add" class="qty-count qty-count--add" type="button" onclick="addOne(id)">+</button>
                         </div>
                     </div>
                 </div>

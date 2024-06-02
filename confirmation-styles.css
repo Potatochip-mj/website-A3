@@ -42,6 +42,8 @@
 /*mobile resolution styling*/
 @media screen and (max-width: 390px){
 
+    
+
     .confirmation-text{
         margin-bottom: 10rem;
     }
