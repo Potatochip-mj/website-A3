@@ -199,6 +199,10 @@
         gap: 1rem;
     }
 
+    .item-details--name{
+        
+    }
+
     .accordion{
         width: 350px;
         align-self: center;

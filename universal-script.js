@@ -354,11 +354,6 @@ for (i = 0; i < accordion.length; i++){
 //Product details page - quantity button
 //onclick for increase product quantity
 function addOne(id){
-    /*let id = this.getAttribute('id');
-    let valueID = id.split("-");
-    let textID = valueID[0] + "-" + valueID[1] + "-" + valueID[2] + "-value";
-    
-    */
 
     let textID = "product-qty-" + id + "-value";
     let productQuantity = document.getElementById(textID);
@@ -401,17 +396,37 @@ function addCart(){
 //side nav overlay functions
 
 function openSideNav(){
-    document.getElementById("side-nav__open").style.display = "none";
+    document.getElementById("sideNavOpen").style.display = "none";
     
-    document.getElementById("side-nav__close").style.display = "block";
+    document.getElementById("sideNavClose").style.display = "block";
     
-    document.getElementById("mySideNav").style.width = "250px";
+    document.getElementById("mySideNav").style.width = "390px";
 }
 
 function closeSideNav(){
-    document.getElementById("side-nav__open").style.display = "block";
+    document.getElementById("sideNavOpen").style.display = "block";
     
-    document.getElementById("side-nav__close").style.display = "none";
+    document.getElementById("sideNavClose").style.display = "none";
     
     document.getElementById("mySideNav").style.width = "0";
+}
+
+
+//SHOPPING CART script
+
+//delete cart item
+
+function deleteItem(id){
+    let cartID = "cartItem" + id;
+    document.getElementById(cartID).remove();
+}
+
+
+
+//CHECKOUT PAGE script
+
+//add to cart button
+function applyDiscount(){
+    let applyButton = document.getElementById("applyBtn");
+    applyButton.innerHTML = "<a>Applied</a>";
 }

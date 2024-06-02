@@ -62,41 +62,8 @@
     align-self: flex-start;
 }
 
-.cart-item--1{
+.cart-item{
     margin: 0 1rem 1.5rem 1rem;
-    
-    display: flex;
-    width: 26.875rem;
-    height: 12.5rem;
-}
-
-.cart-item--2{
-    margin: 0 1rem 1.5rem 1rem;
-    
-    display: flex;
-    width: 26.875rem;
-    height: 12.5rem;
-}
-
-.cart-item--3{
-    margin: 0 1rem 1.5rem 1rem;
-    
-    display: flex;
-    width: 26.875rem;
-    height: 12.5rem;
-}
-
-.cart-item--4{
-    margin: 0 1rem 1.5rem 1rem;
-    
-    display: flex;
-    width: 26.875rem;
-    height: 12.5rem;
-}
-
-.cart-item--5{
-    margin: 0 1rem 1.5rem 1rem;
-    
     display: flex;
     width: 26.875rem;
     height: 12.5rem;
