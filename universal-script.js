@@ -78,10 +78,11 @@ const products = [
 
 let priceMinVal = 0;
 let priceMaxVal = 500;
+let itemsDisplayed = [];
 
 document.addEventListener("DOMContentLoaded", function() {
 
-    let itemsDisplayed = document.querySelectorAll(".item.cluster");
+    itemsDisplayed = document.querySelectorAll(".item.cluster");
 
 });
 
@@ -212,7 +213,14 @@ function showItems(){
         }
     }
 
-    console.log(itemsToDisplay);
+    itemsDisplayed.forEach(function(itemDisplayed){
+        let itemTitle = itemDisplayed.querySelector('.item-title').innerHTML;
+        for(let i = 0; i<itemsToDisplay.length; i++){
+            if (!itemsToDisplay.includes(itemTitle)) {
+                itemDisplayed.style.display = 'none';
+            }
+        }
+    });
 
 
     items = document.querySelector('.items-container');
@@ -228,6 +236,8 @@ function showItems(){
     filterButton.style.display = 'flex';
     backButton.style.display = 'none';
     filters.style.display = 'none';
+
+
 };
 
 //product details page - image carousel
