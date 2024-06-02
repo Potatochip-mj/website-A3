@@ -240,6 +240,16 @@ function showItems(){
 
 };
 
+
+document.addEventListener("DOMContentLoaded", function() {
+    let itemsDisplayed = document.getElementsByClassName("item-title");
+    let displayName = itemsDisplayed[0].innerHTML;
+    console.log(displayName);
+});
+
+
+//PRODUCT PAGE script
+
 //product details page - image carousel
 let slideIndex = 1;
 showSlides(slideIndex);
@@ -273,9 +283,31 @@ function showSlides(n){
     dots[slideIndex - 1].className += " active-img";
 }
 
-//product details page - description accordion --- idk what's wrong with this rn, will fix soon
-var accordion = document.getElementsByClassName("accordion");
 
+//description accordion --- idk what's wrong with this rn, will fix soon
+function openAccordion(){
+    let accordion = document.getElementsByClassName("accordion");
+
+    for (i = 0; i <accordion.length; i++){
+        accordion[i].addEventListener("click", function(){
+            this.classList.toggle("active-accordion");
+
+            //toggles between showing and hiding the active panel
+            let panel = this.nextElementSibling;
+
+            if (panel.style.display === "block"){
+                panel.style.display = "none";
+            } else {
+                panel.style.display = "block";
+            }
+
+        });
+    }
+}
+
+
+
+/* animated slide down panels
 for (i = 0; i < accordion.length; i++){
     accordion[i].addEventListener("click", function(){
         this.classList.toggle("active-accordion");
@@ -286,23 +318,34 @@ for (i = 0; i < accordion.length; i++){
             panel.style.maxHeight = panel.scrollHeight + "px";
         }
     });
-}
+} */
 
 
-//Shopping cart script - quantity button
-const quantityButton = document.getElementsByClassName("quantity-btn"); //idk if const will work since there are technically multiple elements called "quantity-btn"
-const quantityMinus = document.getElementsByClassName("qty-count--minus");
-const quantityAdd = document.getElementsByClassName("qty-count--add");
-const productQuantity = document.getElementsByClassName("product-qty")
-
-//onclick for quantityAdd - add one to the input field value
+//Product details page - quantity button
+//onclick for increase product quantity
 function addOne(){
-    let currentQuantity = parseInt(productQuantity.innerHTML);
-    console.log(currentQuantity);
+    let productQuantity = document.getElementsByClassName("product-qty")[0]; //changed "single-product-qty" back to "product-qty" here and in the HTML
+    let qtyMin = parseInt(productQuantity.getAttribute("min"));
+    let qtyMax = parseInt(productQuantity.getAttribute("max"));
+    let qtyValue = parseInt(productQuantity.getAttribute("value"));
 
-    let newQuantity = currentQuantity + 1;
-    currentQuantity = newQuantity;
-    console.log(currentQuantity);
+    if (qtyValue >= qtyMin && qtyValue <= qtyMax && (qtyValue + 1 >= qtyMin && qtyValue + 1 <= qtyMax)){
+        qtyValue = qtyValue + 1;
+        productQuantity.setAttribute("value", qtyValue.toString());
+        //productQuantity[0].innerHTML = "<p>{qty}</p>";
+    }
 }
 
-//honestly idk what I'm doing, will attempt to fix this later
+//onclick for decrease product quantity
+function minusOne(){
+    let productQuantity = document.getElementsByClassName("product-qty")[0]; //changed "single-product-qty" back to "product-qty" here and in the HTML
+    let qtyMin = parseInt(productQuantity.getAttribute("min"));
+    let qtyMax = parseInt(productQuantity.getAttribute("max"));
+    let qtyValue = parseInt(productQuantity.getAttribute("value"));
+
+    if ((qtyValue >= qtyMin && qtyValue <= qtyMax) && (qtyValue - 1 >= qtyMin && qtyValue - 1 <= qtyMax)){
+        qtyValue = qtyValue - 1;
+        productQuantity.setAttribute("value", qtyValue.toString());
+        //productQuantity[0].innerHTML = "<p>{qty}</p>";
+    }
+}

@@ -27,22 +27,11 @@
         </div>
     </nav>
 
-    <div id="mySideNav" class="side-nav"> <!--Side bar nav for mobile resolution-->
-        <img class="nav-logo-home" src="A3 images and stuff/westec logo.svg">
-        <div class="side-nav-btns">
-            <a class="side-nav__close" onclick="closeSideNav()"><img src="A3 images and stuff/x-mark-xxl 1.svg"></a>
-            <a class="side-nav__btn" href="home-page-index.html"><h3>HOME</h3></a>
-            <a class="side-nav__btn" href="products-index.html"><h3>PRODUCTS</h3></a>
-            <a class="side-nav__btn" href="shopping-cart-index.html"><h3>CART</h3></a>
-        </div>
-        
-    </div>
-
     <div class="item-container cluster">
         <div class="item-container__carousel"> <!--container for the image carousel-->
             <div class="carousel-box">
                 <img class="item-container__img" src="A3 images and stuff/sansai speaker 1.jpg">
-                <img class="item-container__img" src="A3 images and stuff/sansai speaker 2.jpg">
+                <img class="item-container__img" src="A3 images and stuff/sansai speaker 2 ver. 2.webp">
                 <img class="prev" onclick="plusSlides(-1)" src="A3 images and stuff/🦆 icon _chevron left_.svg">
                 <img class="next" onclick="plusSlides(1)" src="A3 images and stuff/🦆 icon _chevron right_.svg">
                 <div class="ellipsis">
@@ -59,38 +48,38 @@
                     <p class="item-details--price">$75.00</p>
     
                     <div class="quantity-btn--product-detail">
-                        <button class="qty-count qty-count--minus" type="button">-</button>
-                        <p class="product-qty">1</p>
-                        <button class="qty-count qty-count--add" type="button">+</button>
+                        <button id="product-qty-1-minus" class="qty-count qty-count--minus" type="button" onclick="minusOne(id)">-</button>
+                        <input id="product-qty-1-value" min="0" max="10" value="1" class="product-qty" type="number">
+                        <button id="product-qty-1-add" class="qty-count qty-count--add" type="button" onclick="addOne(id)">+</button>
                     </div>
                 </div>
                 
                 <div class="item-container__btns">
                     <a href="#" class="btn btn--primary">Add to Cart</a> 
-                    <a href="#" class="btn btn--accent-1">Back</a> 
+                    <a href="products-index.html" class="btn btn--accent-1">Back</a> 
                 </div>
             </div>
 
             <div class="item-container__description">
-                <button class="accordion accordion--top">PRODUCT FEATURES</button>
+                <button class="accordion accordion--top" onclick="openAccordion()">PRODUCT FEATURES</button>
                 <div class="accordion-panel">
                     <li class="panel-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</li>
                     <li class="panel-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</li>
                 </div>
 
-                <button class="accordion">PRODUCT SPECIFICATIONS</button>
+                <button class="accordion" onclick="openAccordion()">PRODUCT SPECIFICATIONS</button>
                 <div class="accordion-panel">
                     <li class="panel-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</li>
                     <li class="panel-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</li>
                 </div>
 
-                <button class="accordion">REVIEWS</button>
+                <button class="accordion" onclick="openAccordion()">REVIEWS</button>
                 <div class="accordion-panel">
                     <li class="panel-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</li>
                     <li class="panel-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</li>
                 </div>
 
-                <button class="accordion accordion--bottom">RETURNS</button>
+                <button class="accordion accordion--bottom" onclick="openAccordion()">RETURNS</button>
                 <div class="accordion-panel accordion-panel--bottom">
                     <li class="panel-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</li>
                     <li class="panel-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</li>
