@@ -149,14 +149,14 @@
 }
 
 .accordion-panel{
-    max-height: 0;
     padding: 10px 20px;
     background-color: #FFFFFF;
     display: none;
     overflow: hidden;
     border-left: 2px solid #565656;
     border-right: 2px solid #565656;
-    transition: max-height 0.2s ease-out;
+    max-height: 100px;
+    /*transition: max-height 0.2s ease-out; */
 }
 
 .accordion-panel--bottom{
@@ -202,6 +202,13 @@
     .accordion{
         width: 350px;
         align-self: center;
+    }
+
+    .accordion-panel{
+        width: 275px;
+        padding: 10px 20px 10px 51px;
+        justify-content: center;
+        margin-left: 0.75rem;
     }
 
 

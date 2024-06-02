@@ -237,6 +237,9 @@ document.addEventListener("DOMContentLoaded", function() {
     console.log(displayName);
 });
 
+
+//PRODUCT PAGE script
+
 //product details page - image carousel
 let slideIndex = 1;
 showSlides(slideIndex);
@@ -270,9 +273,31 @@ function showSlides(n){
     dots[slideIndex - 1].className += " active-img";
 }
 
-//product details page - description accordion --- idk what's wrong with this rn, will fix soon
-var accordion = document.getElementsByClassName("accordion");
 
+//description accordion --- idk what's wrong with this rn, will fix soon
+function openAccordion(){
+    let accordion = document.getElementsByClassName("accordion");
+
+    for (i = 0; i <accordion.length; i++){
+        accordion[i].addEventListener("click", function(){
+            this.classList.toggle("active-accordion");
+
+            //toggles between showing and hiding the active panel
+            let panel = this.nextElementSibling;
+
+            if (panel.style.display === "block"){
+                panel.style.display = "none";
+            } else {
+                panel.style.display = "block";
+            }
+
+        });
+    }
+}
+
+
+
+/* animated slide down panels
 for (i = 0; i < accordion.length; i++){
     accordion[i].addEventListener("click", function(){
         this.classList.toggle("active-accordion");
@@ -283,11 +308,10 @@ for (i = 0; i < accordion.length; i++){
             panel.style.maxHeight = panel.scrollHeight + "px";
         }
     });
-}
+} */
 
 
-//Product details script - quantity button
-
+//Product details page - quantity button
 //onclick for increase product quantity
 function addOne(){
     let productQuantity = document.getElementsByClassName("product-qty")[0]; //changed "single-product-qty" back to "product-qty" here and in the HTML
