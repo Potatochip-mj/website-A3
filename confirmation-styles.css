@@ -38,3 +38,16 @@
     width: 185px;
     margin: 1rem 0 1rem 0;
 }
+
+/*mobile resolution styling*/
+@media screen and (max-width: 390px){
+
+    .confirmation-text{
+        margin-bottom: 10rem;
+    }
+
+    .confirmation-text__heading{
+        width: 100%;
+    }
+
+}
