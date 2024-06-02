@@ -76,7 +76,8 @@ const products = [
     }
 ];
 
-let priceMinVal, priceMaxVal;
+let priceMinVal = 0;
+let priceMaxVal = 500;
 
 document.addEventListener("DOMContentLoaded", function() {
 
@@ -195,8 +196,24 @@ function showItems(){
         }
     }
 
+    loop3:
+    for(let i = 0; i<itemsToDisplay.length; i++){
+        loop4:
+        for(let a = 0; a<products.length; a++){
+            if(itemsToDisplay[i] == products[a].shortName){
+                if(products[a].price >= priceMinVal && products[a].price <= priceMaxVal){
+                    continue loop3;
+                }else{
+                    itemsToDisplay.splice(i, 1);
+                    i--;
+                    break loop4;
+                }
+            }
+        }
+    }
 
     console.log(itemsToDisplay);
+
 
     items = document.querySelector('.items-container');
     search = document.querySelector('.filter-bar-search');
