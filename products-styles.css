@@ -1,3 +1,4 @@
+/* This is the CSS file for the products page of the Westec website! */
 @import url("universal-styles.css");
 
 .title{
@@ -5,6 +6,7 @@
     padding-left: 7rem;
 }
 
+/* styling for the filter */
 .filter-bar{
     flex-direction: row;
     margin: 2rem 0 2rem 0;
@@ -31,6 +33,7 @@
     padding-left: 7rem;
 }
 
+/* styling for the search bar */
 .filter-bar-search--desktop > input{
     min-height: 2rem;
     min-width: 30rem;
@@ -42,6 +45,7 @@
     display: none;
 }
 
+/* styling for the sort bar */
 .filter-bar-sort{
     flex-direction: row;
     padding-right: 7rem;
@@ -54,6 +58,7 @@
     margin-bottom: auto;
 }
 
+/* styling for the filter container */
 .filters-container{
     display: none;
     flex-direction: column;
@@ -63,6 +68,7 @@
     padding-left: 7rem;
 }
 
+/* styling for the price slider text and container */
 .price-container{
     flex-direction: column;
     margin-right: auto;
@@ -89,6 +95,9 @@
     padding-left: 0.65rem;
 }
 
+/* styling for price slider
+    code adapted from: https://www.youtube.com/watch?v=FShnKqPXknI
+*/
 .price-slider{
     width: 69rem;
     margin: 2rem 0 4rem 0;
@@ -127,6 +136,9 @@
     left: -3px;
 }
 
+/* chrome and internet explorer styling for the slider dot
+    code adapted from: https://www.youtube.com/watch?v=FShnKqPXknI
+*/
 input[type="range"]::-webkit-slider-thumb{
     height: 20px;
     width: 20px;
@@ -136,6 +148,9 @@ input[type="range"]::-webkit-slider-thumb{
     background: #9A15EC;
 }
 
+/* firefox styling for the slider dot
+    code adapted from: https://www.youtube.com/watch?v=FShnKqPXknI
+*/
 input[type="range"]::-moz-range-thumb{
     height: 20px;
     width: 20px;
@@ -146,6 +161,7 @@ input[type="range"]::-moz-range-thumb{
     background: #9A15EC;
 }
 
+/* styling for the category checkbox container */
 .category-brand-container{
     flex-direction: row;
     margin: 0 0 auto 0;
@@ -160,6 +176,7 @@ input[type="range"]::-moz-range-thumb{
     margin: 0 0 1rem;
 }
 
+/* styling for the checkboxes and text positions */
 .checkbox-container{
     position: relative;
     display: block;
@@ -173,6 +190,7 @@ input[type="range"]::-moz-range-thumb{
     cursor: pointer;
 }
 
+/* styling for checkboxes when unchecked */
 input[type="checkbox"] {
     appearance: none;
     -webkit-appearance: none;
@@ -185,6 +203,7 @@ input[type="checkbox"] {
     cursor: pointer;
 }
 
+/* styling for checkboxes when they are checked */
 input[type="checkbox"]:checked {
     height: 25px;
     width: 25px;
@@ -194,6 +213,7 @@ input[type="checkbox"]:checked {
     left: -0.3rem;
 }
 
+/* styling for the brand checkbox container */
 .brand-container{
     flex-direction: column;
     margin-right: auto;
@@ -204,6 +224,7 @@ input[type="checkbox"]:checked {
     margin: 0 0 1rem;
 }
 
+/* styling for all the item containers and the insides */
 .items-container{
     display: grid;
     grid-template-columns: repeat(auto-fill, 240px);
@@ -232,10 +253,12 @@ input[type="checkbox"]:checked {
     font-size: 1.5rem;
 }
 
+/* css styling for no results div */
 .no-results-container{
     min-height: 70vh;
     display: none;
 }
+
 
 .no-results-text{
     margin: auto auto 35% auto;
@@ -243,10 +266,12 @@ input[type="checkbox"]:checked {
     text-align: center;
 }
 
+/* styling for footer to allow some space */
 footer{
     margin-top: 5rem;
 }
 
+/* media screening for if the user is on a phone resolution */
 @media screen and (max-width: 400px) {
 
     body{

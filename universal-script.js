@@ -1,23 +1,5 @@
 //This is the page for all the JS script for the Westec website!
 
-
-//side nav overlay functions
-function openSideNav(){
-    document.getElementById("sideNavOpen").style.display = "none";
-    
-    document.getElementById("sideNavClose").style.display = "block";
-    
-    document.getElementById("mySideNav").style.width = "390px";
-}
-
-function closeSideNav(){
-    document.getElementById("sideNavOpen").style.display = "block";
-    
-    document.getElementById("sideNavClose").style.display = "none";
-    
-    document.getElementById("mySideNav").style.width = "0";
-}
-
 //A key value pair array used to hold all the items of the site
 const products = [
 
@@ -103,18 +85,40 @@ const products = [
     }
 ];
 
+//side nav overlay functions
+function openSideNav(){
+    document.getElementById("sideNavOpen").style.display = "none";
+    
+    document.getElementById("sideNavClose").style.display = "block";
+    
+    document.getElementById("mySideNav").style.width = "390px";
+}
+
+function closeSideNav(){
+    document.getElementById("sideNavOpen").style.display = "block";
+    
+    document.getElementById("sideNavClose").style.display = "none";
+    
+    document.getElementById("mySideNav").style.width = "0";
+}
+
+
+//declaration of variables that will be used for search and filtering
 let priceMinVal = 0;
 let priceMaxVal = 500;
 let itemsDisplayed = [];
 let searchBar;
 
+//code for the search bar, the function below forces the HTML file to load first before searching for anything
 document.addEventListener("DOMContentLoaded", function() {
 
     itemsDisplayed = document.querySelectorAll(".item.cluster");
     searchBarDesktop = document.querySelector(".search-bar--desktop");
     searchBarIphone = document.querySelector(".search-bar--iphone");
 
-    
+    //function that filters through each item and displays ones that matches the search
+    //this one is for desktop resolution
+    //code adapted from: https://www.youtube.com/watch?v=TlP5WIxVirU&t=7s
     searchBarDesktop.addEventListener("input", function(event){
         const userInput = event.target.value.trim().toLowerCase();
         itemsDisplayed.forEach(function(itemDisplayed){
@@ -127,6 +131,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     })
 
+    //this one is for mobile res
     searchBarIphone.addEventListener("input", function(event){
         const userInput = event.target.value.trim().toLowerCase();
         itemsDisplayed.forEach(function(itemDisplayed){
@@ -146,30 +151,27 @@ document.addEventListener("DOMContentLoaded", function() {
 //Button for the products list page to show all the filters
 function showFilters(){
     
-    document.querySelector(".no-results-container").style.display = "none";
-    searchIphone = document.querySelector('.filter-bar-search--iphone');
-    searchDesktop = document.querySelector('.filter-bar-search--desktop');
-    items = document.querySelector('.items-container');
-    sort = document.querySelector('.filter-bar-sort');
-    filterButton = document.querySelector('.filter-bar-filter');
-    backButton = document.querySelector('.back-button-container');
-    filters = document.querySelector('.filters-container');
+    //making all the elements that aren't part of the filters invisble and showing the filters
+    document.querySelector(".no-results-container").style.display = 'none';
+    document.querySelector('.filter-bar-search--iphone').style.display = 'none';
+    document.querySelector('.filter-bar-search--desktop').style.display = 'none';
+    document.querySelector('.items-container').style.display = 'none';
+    document.querySelector('.filter-bar-sort').style.display = 'none';
+    document.querySelector('.filter-bar-filter').style.display = 'none';
+    document.querySelector('.back-button-container').style.display = 'flex';
+    document.querySelector('.filters-container').style.display = 'flex';
 
-    items.style.display = 'none';
-    sort.style.display = 'none';
-    searchDesktop.style.display = 'none';
-    searchIphone.style.display = 'none';
-    filterButton.style.display = 'none';
-    backButton.style.display = 'flex';
-    filters.style.display = 'flex';
-
+    //variables for the price slider
     const rangeInput = document.querySelectorAll('.slider-range-input input');
     let priceMinText = document.getElementById('price-min');
     let priceMaxText = document.getElementById('price-max');
     progress = document.querySelector(".slider-body .slider-range");
 
+    //variable for the minimum price gap within the price slider
     let priceGap = 20;
 
+    //function that changes the look of the slider with each new input on the slider
+    //code adapted from: https://www.youtube.com/watch?v=FShnKqPXknI
     rangeInput.forEach(input =>{
         input.addEventListener("input", e =>{
             let minVal = parseInt(rangeInput[0].value);
@@ -197,23 +199,29 @@ function showFilters(){
 //Back button to close out of the filters and reshow the items
 function showItems(){
 
+    //storing the category and brand checkboxes into variables 
     let categoryCheckboxes = document.getElementsByName("category");
     let brandCheckboxes = document.getElementsByName("brand");
 
+    //empty arrays in which the checked categories, brands and items to be displayed will be stored
     let checkedCategories = [], checkedBrands = [], itemsToDisplay = [];
 
+    //looping through the category checkboxes to see which ones have been ticked and storing into empty array
     for(let i = 0; i<categoryCheckboxes.length; i++){
         if(categoryCheckboxes[i].checked){
             checkedCategories.push(categoryCheckboxes[i].value);
         }
     }
 
+    //looping through the brand checkboxes to see which ones have been ticked and storing into empty array
     for(let i = 0; i<brandCheckboxes.length; i++){
         if(brandCheckboxes[i].checked){
             checkedBrands.push(brandCheckboxes[i].value);
         }
     }
 
+    //looping through the products array and checked brands array to see which ones match
+    //storing matching items into empty array declared above
     for(let i = 0; i<checkedBrands.length; i++){
         for(let a = 0; a<products.length; a++){
             if(products[a].brand == checkedBrands[i]){
@@ -222,6 +230,8 @@ function showItems(){
         }
     }
 
+    //similarly, looping through to see which products match with the ticked categories
+    //however this one only adds it if a brand of that category is also ticked
     for(let i = 0; i<checkedCategories.length; i++){
         loop1:
         for(let a = 0; a<products.length; a++){
@@ -242,6 +252,9 @@ function showItems(){
         }
     }
 
+    //loops through the items to be displayed array to take out items that aren't both ticked in category and brand
+    //before this loop items would show even when their category wasn't ticked as long as their brand was ticked
+    //this loop fixes the array which displays items ticked in both categories and brands
     loop2:
     for(let i = 0; i<itemsToDisplay.length; i++){
         for(let a = 0; a<products.length; a++){
@@ -258,7 +271,8 @@ function showItems(){
         }
     }
 
-
+    //loops through the items to be displayed array to see which items fall within the desired price range of the user
+    //takes out elements in the array that don't fall within this range
     loop3:
     for(let i = 0; i<itemsToDisplay.length; i++){
         loop4:
@@ -275,6 +289,8 @@ function showItems(){
         }
     }
 
+    //an if else statement to determine whether the array is empty or not
+    //if it is empty, show error message and if else, correctly displays items to be shown
     if(itemsToDisplay.length == 0){
         itemsDisplayed.forEach(function(itemDisplayed){
             itemDisplayed.style.display = 'none';
@@ -282,6 +298,8 @@ function showItems(){
         document.querySelector(".no-results-container").style.display = "flex";
     }else{
         document.querySelector(".no-results-container").style.display = "none";
+        //loops through the items currently displayed and see if the title matches one within the items to display array
+        //if it does, change the display to flex and if not change it to none
         itemsDisplayed.forEach(function(itemDisplayed){
             let itemTitle = itemDisplayed.querySelector('.item-title').innerHTML;
             for(let i = 0; i<itemsToDisplay.length; i++){
@@ -294,20 +312,15 @@ function showItems(){
         });
     }
 
-    
+    //shows and hides elements when user is done filtering
     searchIphone = document.querySelector('.filter-bar-search--iphone');
     searchDesktop = document.querySelector('.filter-bar-search--desktop');
-    items = document.querySelector('.items-container');
-    sort = document.querySelector('.filter-bar-sort');
-    filterButton = document.querySelector('.filter-bar-filter');
-    backButton = document.querySelector('.back-button-container');
-    filters = document.querySelector('.filters-container');
-
-    items.style.display = 'grid';
-    sort.style.display = 'flex';
-    filterButton.style.display = 'flex';
-    backButton.style.display = 'none';
-    filters.style.display = 'none';    
+    document.querySelector('.items-container').style.display = 'grid';
+    document.querySelector('.filter-bar-sort').style.display = 'flex';
+    document.querySelector('.filter-bar-filter').style.display = 'flex';
+    document.querySelector('.back-button-container').style.display = 'none';
+    document.querySelector('.filters-container').style.display = 'none';
+    //if statement to determine which search bar to show depening on screen res
     if(screen.width >= 400){
         searchDesktop.style.display = "flex";
     }else{
@@ -355,7 +368,7 @@ function showSlides(n){
 }
 
 
-//description accordion --- idk what's wrong with this rn, will fix soon
+//description accordion 
 //code adapted from: https://www.w3schools.com/howto/howto_js_accordion.asp
 function openAccordion(){
     let accordion = document.getElementsByClassName("accordion");
