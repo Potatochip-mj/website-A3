@@ -102,6 +102,10 @@ p{  /*this one is for normal text*/
     cursor: pointer;
 }
 
+.btn:hover{
+    filter: brightness(125%);
+}
+
 .btn--primary{
     background-color: #9A15EC;
     color: white;

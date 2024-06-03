@@ -14,7 +14,7 @@ html{
     filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.25));
 }
 
-/*HOME PAGE styling*/
+/* css styling for the home banner */
 .banner{ 
     /*use this to style the container for the landing page items*/
     background-image: url("A3 images and stuff/home\ page\ banner\ image.jpg");
@@ -28,12 +28,12 @@ html{
     text-align: center;
 }
 
-    .slogan-text{
-        margin-left: auto;
-        margin-right: auto;
-        color: #FFFFFF;
-        text-shadow: 0px 4px 4px  rgba(0, 0, 0, 0.4);
-    }
+.slogan-text{
+    margin-left: auto;
+    margin-right: auto;
+    color: #FFFFFF;
+    text-shadow: 0px 4px 4px  rgba(0, 0, 0, 0.4);
+}
 
 .banner-buttons{
     height: 5rem;
@@ -99,6 +99,7 @@ html{
     backdrop-filter: blur(5px);
 }
 
+/* css styling for the automatically scrolling bar of text under the banner */
 .auto-scrolling-bar{
     background-color: #1D1D1D;
     min-height: 9.5vh;
@@ -116,6 +117,7 @@ html{
     animation: scroll 25s linear infinite;
 }
 
+/* keyframes ruling to animate the auto scrolling text */
 @keyframes scroll{
     to{
         transform: translate(calc(-50% - 7.5rem));
@@ -131,6 +133,7 @@ html{
     overflow: hidden;
 }
 
+/* css styling for the westec intro section */
 .westec-intro-text{
     flex-direction: column;
     max-width: 35rem;
@@ -148,6 +151,7 @@ html{
     display: none;
 }
 
+/* css styling for the westec selling and about section */
 .westec-about{
     flex-direction: column;
     min-height: 90rem;
@@ -205,6 +209,7 @@ html{
     flex-direction: column;
 }
 
+/* css styling for the best selling section */
 .best-selling{
     margin-top: 3rem;
 }
@@ -242,6 +247,7 @@ html{
     transition: ease-in-out 0.25s;
 }
 
+/* styles the sheet so that when the item is hovered it has a purple underglow */
 .best-selling-item > a > img:hover{
     box-shadow: 0px 4px 15px 1px rgba(154, 21, 236, 0.25);
     cursor: pointer;
@@ -254,6 +260,7 @@ html{
     text-align: center;
 }
 
+/* css styling for the reviews section */
 .reviews{
     margin-top: 3rem;
 }
@@ -321,6 +328,7 @@ html{
     max-height: 1rem;
 }
 
+/* styling for the end note section */
 .end-note{
     margin: 5rem auto 0 auto;
     flex-direction: column;
@@ -336,13 +344,14 @@ html{
     margin: 2rem auto 6rem auto;
 }
 
-
+/* media screening for if the user is on a phone resolution */
 @media screen and (max-width: 400px){
 
     body{
         gap: 0;
     }
 
+    /* changes the icon of the menu on the home page to white to enhance visability */
     .mobile-nav__hamburger{
         filter: brightness(0%);
         filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(92deg) brightness(104%) contrast(106%) drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.25));
@@ -490,7 +499,6 @@ html{
 
         padding: 0 1rem 1rem 1rem;
     }
-
 
     .reviews{
         margin-top: 2rem;
