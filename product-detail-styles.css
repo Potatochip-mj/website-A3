@@ -221,7 +221,7 @@
     .accordion-panel{
         width: 275px;
         padding: 10px 20px 10px 51px;
-        justify-content: center;
+        justify-items: center;
         margin-left: 0.75rem;
     }
 

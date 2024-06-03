@@ -44,61 +44,91 @@
 
     <div class="checkout cluster">
         <div class="checkout__items">
-            <div class="checkout-card checkout__cards--shipping">
-                <div class="card-box">
-                    <p class="card-heading"><b>Shipping</b></p>
-                    <a href="#" target="_self" class="btn btn--primary pickup">In-store Pickup</a>
-                </div>
-                <label class="input-label" for="address-line-1">Address Line 1</label>
-                <input class="line--large" type="text" name="address-line-1">
-                <label class="input-label" for="address-line-2">Address Line 2</label>
-                <input class="line--large" type="text" name="address-line-2">
-                <label class="input-label" for="suburb">Suburb</label>
-                <input class="line--medium" type="text" name="suburb">
-                <label class="input-label" for="city">City</label>
-                <input class="line--medium" type="text" name="city">
-                <div class="state-code">
-                    <div class="state-code--inner">
-                        <label class="input-label" for="state">State</label>
-                        <input class="line--small" type="text" name="state">
-                    </div> 
-                    <div class="state-code--inner">
-                        <label class="input-label" for="postcode">Postcode</label>
-                        <input class="line--small" type="text" name="postcode">
+            <div class="card-stack">
+                <div class="checkout-card checkout__cards--shipping" id="shippingOpt">
+                    <div class="card-box">
+                        <p class="card-heading"><b>Shipping</b></p>
+                        <a class="btn btn--primary" id="deliveryBtn" onclick="swapCard()">In-store Pickup</a>
+                    </div>
+                    <label class="input-label" for="address-line-1">Address Line 1</label>
+                    <input class="line--large" type="text" name="address-line-1">
+                    <label class="input-label" for="address-line-2">Address Line 2</label>
+                    <input class="line--large" type="text" name="address-line-2">
+                    <label class="input-label" for="suburb">Suburb</label>
+                    <input class="line--medium" type="text" name="suburb">
+                    <label class="input-label" for="city">City</label>
+                    <input class="line--medium" type="text" name="city">
+                    <div class="state-code">
+                        <div class="state-code--inner">
+                            <label class="input-label" for="state">State</label>
+                            <input class="line--small" type="text" name="state">
+                        </div> 
+                        <div class="state-code--inner">
+                            <label class="input-label" for="postcode">Postcode</label>
+                            <input class="line--small" type="text" name="postcode">
+                        </div>
+                    </div>
+                    
+                    <div class="calculated-cost">
+                        <label class="input-label" for="calculated-shipping-cost">Calculated Shipping Cost</label>
+                        <div class="fixed-input" name="calculated-shipping-cost"><p><b>$XYZ.00</b></p></div>
                     </div>
                 </div>
-                
-                <div class="calculated-cost">
-                    <label class="input-label" for="calculated-shipping-cost">Calculated Shipping Cost</label>
-                    <div class="fixed-input" name="calculated-shipping-cost"><p><b>$XYZ.00</b></p></div>
+    
+                <div class="checkout-card checkout__cards--pickup" id="pickupOpt">
+                    <div class="card-box">
+                        <p class="card-heading"><b>In-Store Pickup</b></p>
+                        <a class="btn btn--primary" id="deliveryBtn" onclick="swapCard()">Shipping</a>
+                    </div>
+                    <label class="input-label" for="name">Name</label>
+                    <input class="line--large" type="text" name="name">
+                    <label class="input-label" for="date">Date (DD/MM/YYYY)</label>
+                    <input class="line--large" type="text" name="date">
+                    <label class="input-label" for="ETA">Estimated Pickup Time</label>
+                    <input class="line--medium" type="text" name="ETA">
+                    <label class="input-label" for="business-hours">Business Hours</label>
+                    <div class="fixed-input fixed-input--large" name="business-hours">
+                        <p><b>Monday to Friday: </b><i>8:30am - 4:30pm</i></p>
+                        <p><b>Saturday: </b><i>Closed</i></p>
+                        <p><b>Sunday: </b><i>Closed</i></p>
+                        <p><b>Public Holidays: </b><i>Closed</i></p>
+                    </div>
+                    <label class="input-label" for="business-address">Business Address</label>
+                    <div class="fixed-input fixed-input--large" name="business-address">
+                        <p>Unit 1, 146 Balcatta Road, </p>
+                        <p>Balcatta, WA, 6021</p>
+                    </div>
                 </div>
             </div>
 
-            <div class="checkout-card checkout__cards--payment">
-                <p class="card-heading"><b>Payment</b></p>
-                <label class="input-label" for="card-number">Card Number</label>
-                <input class="line--large" type="text" name="card-number">
-                <label class="input-label" for="card-name">Name on Card</label>
-                <input class="line--large" type="text" name="card-name">
-                <label class="input-label" for="security-code">Security Code</label>
-                <input class="line--small" type="text" name="security-code">
-            </div>
-
-            <div class="checkout-card checkout__cards--discounts">
-                <p class="card-heading"><b>Discounts</b></p>
-                <div class="card-box">
-                    <div class="discount-inner">
-                        <label class="input-label" for="discount">Discount Code</label>
-                        <input class="line--medium" type="text" name="discount">
+            <div class="card-stack">
+                <div class="checkout-card checkout__cards--payment">
+                    <p class="card-heading"><b>Payment</b></p>
+                    <label class="input-label" for="card-number">Card Number</label>
+                    <input class="line--large" type="text" name="card-number">
+                    <label class="input-label" for="card-name">Name on Card</label>
+                    <input class="line--large" type="text" name="card-name">
+                    <label class="input-label" for="security-code">Security Code</label>
+                    <input class="line--small" type="text" name="security-code">
+                </div>
+    
+                <div class="checkout-card checkout__cards--discounts">
+                    <p class="card-heading"><b>Discounts</b></p>
+                    <div class="card-box">
+                        <div class="discount-inner">
+                            <label class="input-label" for="discount">Discount Code</label>
+                            <input class="line--medium" type="text" name="discount">
+                        </div>
+                        <a class="btn btn--primary apply" id="applyBtn" onclick="applyDiscount()">Apply</a> <!--should turn into "Applied" when clicked-->
                     </div>
-                    <a class="btn btn--primary apply" id="applyBtn" onclick="applyDiscount()">Apply</a> <!--should turn into "Applied" when clicked-->
-                </div>
-                
-                <div class="calculated-cost">
-                    <label class="input-label" for="calculated-discount">Amounted Discounted</label>
-                    <div class="fixed-input" name="calculated-discount"><p><b>$XYZ.00</b></p></div>
+                    
+                    <div class="calculated-cost">
+                        <label class="input-label" for="calculated-discount">Amounted Discounted</label>
+                        <div class="fixed-input" name="calculated-discount"><p><b>$XYZ.00</b></p></div>
+                    </div>
                 </div>
             </div>
+            
             
         </div>
         

@@ -372,8 +372,14 @@ function minusOne(id){
 //add to cart button
 function addCart(){
     let addButton = document.getElementById("addBtn");
-    addButton.innerHTML = "<a>Added</a>";
-    addButton.classList.replace("btn--primary", "btn--accent-3");
+
+    if (addButton.innerHTML === "<a>Add to Cart</a>"){
+        addButton.innerHTML = "<a>Added</a>";
+        addButton.classList.replace("btn--primary", "btn--accent-3");
+    } else {
+        addButton.innerHTML = "<a>Add to Cart</a>";
+        addButton.classList.replace("btn--accent-3", "btn--primary");
+    }
 }
 
 
@@ -413,5 +419,59 @@ function deleteItem(id){
 //add to cart button
 function applyDiscount(){
     let applyButton = document.getElementById("applyBtn");
-    applyButton.innerHTML = "<a>Applied</a>";
+
+    if (applyButton.innerHTML === "<a>Apply</a>"){
+        applyButton.innerHTML = "<a>Applied</a>";
+        applyButton.classList.replace("btn--primary", "btn--accent-3");
+    } else {
+        applyButton.innerHTML = "<a>Apply</a>";
+        applyButton.classList.replace("btn--accent-3", "btn--primary");
+    }
+    
+    
 }
+
+/*
+//swapping between shipping and in-store pickup details
+function swapCard(){
+    //click on deliveryBtn to change class from --shipping to --pickup
+    let deliveryOption = document.getElementById("deliveryOpt");
+
+    deliveryOption.classList.toggle("checkout__cards--pickup");
+
+    //set display to flex for --pickup
+    //deliveryOption.style.display = "flex";
+    
+}
+*/
+
+function swapCard(){
+    let deliveryOption = document.getElementById("shippingOpt");
+
+    if (deliveryOption.style.display === "none"){
+        deliveryOption.style.display = "flex";
+    } else {
+        deliveryOption.style.display = "none";
+    }
+}
+
+
+/*
+function changeCard(){
+    let deliveryOption = document.getElementById("deliveryOpt");
+
+    for (i = 0; i <deliveryOption.length; i++){
+        deliveryOption[i].addEventListener("click", function(){
+            this.classList.toggle("checkout__cards--pickup");
+
+            //toggles between showing and hiding the active panel
+            //let panel = this.nextElementSibling;
+
+            if (deliveryOption.style.display === "flex"){
+                deliveryOption.style.display = "none";
+            } else {
+                deliveryOption.style.display = "flex";
+            }
+        });
+    }
+} */
