@@ -347,7 +347,7 @@ footer{
 }
 
 /*Basic page style changes for mobile resolution*/
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 400px) {
     /*page set up*/
     body{
         display: flex;

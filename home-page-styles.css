@@ -304,6 +304,17 @@ html{
     margin: 1.5rem auto 0 0;
 }
 
+.reviews-stars-container{
+    margin-top: 0.2rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.reviews-stars{
+    max-width: 1rem;
+    max-height: 1rem;
+}
+
 .end-note{
     margin: 5rem auto 0 auto;
     flex-direction: column;

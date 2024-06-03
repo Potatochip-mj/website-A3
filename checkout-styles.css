@@ -238,7 +238,7 @@
 }
 
 /*mobile resolution styling*/
-@media screen and (max-width: 390px){
+@media screen and (max-width: 400px){
     
     .checkout__items{
         flex-direction: column;

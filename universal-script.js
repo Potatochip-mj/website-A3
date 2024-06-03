@@ -133,6 +133,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
 //Button for the products list page to show all the filters
 function showFilters(){
+    
+    document.querySelector(".no-results-container").style.display = "none";
+    
     items = document.querySelector('.items-container');
     search = document.querySelector('.filter-bar-search');
     sort = document.querySelector('.filter-bar-sort');
@@ -263,7 +266,9 @@ function showItems(){
         itemsDisplayed.forEach(function(itemDisplayed){
             itemDisplayed.style.display = 'none';
         })
+        document.querySelector(".no-results-container").style.display = "flex";
     }else{
+        document.querySelector(".no-results-container").style.display = "none";
         itemsDisplayed.forEach(function(itemDisplayed){
             let itemTitle = itemDisplayed.querySelector('.item-title').innerHTML;
             for(let i = 0; i<itemsToDisplay.length; i++){

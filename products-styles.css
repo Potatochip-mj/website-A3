@@ -227,3 +227,13 @@ input[type="checkbox"]:checked {
 .item-title{
     font-size: 1.5rem;
 }
+
+.no-results-container{
+    min-height: 70vh;
+    display: none;
+}
+
+.no-results-text{
+    margin: auto auto 35% auto;
+    font-size: large;
+}

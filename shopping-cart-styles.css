@@ -99,7 +99,7 @@
 
 
 /*mobile resolution styling*/
-@media screen and (max-width: 390px){
+@media screen and (max-width: 400px){
     
     .cart__items{
         flex-direction: column;
