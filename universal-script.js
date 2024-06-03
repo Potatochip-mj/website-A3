@@ -1,6 +1,23 @@
 //This is the page for all the JS script for the Westec website!
 
 
+//side nav overlay functions
+function openSideNav(){
+    document.getElementById("sideNavOpen").style.display = "none";
+    
+    document.getElementById("sideNavClose").style.display = "block";
+    
+    document.getElementById("mySideNav").style.width = "390px";
+}
+
+function closeSideNav(){
+    document.getElementById("sideNavOpen").style.display = "block";
+    
+    document.getElementById("sideNavClose").style.display = "none";
+    
+    document.getElementById("mySideNav").style.width = "0";
+}
+
 //A key value pair array used to hold all the items of the site
 const products = [
 
@@ -112,6 +129,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
+//PRODUCTS LIST page script
 
 //Button for the products list page to show all the filters
 function showFilters(){
@@ -280,7 +298,8 @@ function showItems(){
 
 //PRODUCT PAGE script
 
-//product details page - image carousel
+//image carousel
+//code adapted from: https://www.w3schools.com/howto/howto_js_slideshow.asp
 let slideIndex = 1;
 showSlides(slideIndex);
 
@@ -315,6 +334,7 @@ function showSlides(n){
 
 
 //description accordion --- idk what's wrong with this rn, will fix soon
+//code adapted from: https://www.w3schools.com/howto/howto_js_accordion.asp
 function openAccordion(){
     let accordion = document.getElementsByClassName("accordion");
 
@@ -335,8 +355,8 @@ function openAccordion(){
 }
 
 
-//Product details page - quantity button
-//onclick for increase product quantity
+//Quantity button controls - this is used in product details pages and in the cart!
+//code adapted from: https://codepen.io/ChynoDeluxe/pen/poyNEay
 function addOne(id){
 
     let textID = "product-qty-" + id + "-value";
@@ -348,11 +368,9 @@ function addOne(id){
     if (qtyValue >= qtyMin && qtyValue <= qtyMax && (qtyValue + 1 >= qtyMin && qtyValue + 1 <= qtyMax)){
         qtyValue = qtyValue + 1;
         productQuantity.setAttribute("value", qtyValue.toString());
-        //productQuantity[0].innerHTML = "<p>{qty}</p>";
     }
 }
 
-//onclick for decrease product quantity
 function minusOne(id){
     let textID = "product-qty-" + id + "-value";
     let productQuantity = document.getElementById(textID);
@@ -364,7 +382,6 @@ function minusOne(id){
     if ((qtyValue >= qtyMin && qtyValue <= qtyMax) && (qtyValue - 1 >= qtyMin && qtyValue - 1 <= qtyMax)){
         qtyValue = qtyValue - 1;
         productQuantity.setAttribute("value", qtyValue.toString());
-        //productQuantity[0].innerHTML = "<p>{qty}</p>";
     }
 }
 
@@ -383,30 +400,9 @@ function addCart(){
 }
 
 
-
-//side nav overlay functions
-
-function openSideNav(){
-    document.getElementById("sideNavOpen").style.display = "none";
-    
-    document.getElementById("sideNavClose").style.display = "block";
-    
-    document.getElementById("mySideNav").style.width = "390px";
-}
-
-function closeSideNav(){
-    document.getElementById("sideNavOpen").style.display = "block";
-    
-    document.getElementById("sideNavClose").style.display = "none";
-    
-    document.getElementById("mySideNav").style.width = "0";
-}
-
-
 //SHOPPING CART script
 
 //delete cart item
-
 function deleteItem(id){
     let cartID = "cartItem" + id;
     document.getElementById(cartID).remove();
@@ -415,8 +411,7 @@ function deleteItem(id){
 
 
 //CHECKOUT PAGE script
-
-//add to cart button
+//apply discount button
 function applyDiscount(){
     let applyButton = document.getElementById("applyBtn");
 
@@ -427,23 +422,7 @@ function applyDiscount(){
         applyButton.innerHTML = "<a>Apply</a>";
         applyButton.classList.replace("btn--accent-3", "btn--primary");
     }
-    
-    
 }
-
-/*
-//swapping between shipping and in-store pickup details
-function swapCard(){
-    //click on deliveryBtn to change class from --shipping to --pickup
-    let deliveryOption = document.getElementById("deliveryOpt");
-
-    deliveryOption.classList.toggle("checkout__cards--pickup");
-
-    //set display to flex for --pickup
-    //deliveryOption.style.display = "flex";
-    
-}
-*/
 
 function swapCard(){
     let deliveryOption = document.getElementById("shippingOpt");
@@ -454,24 +433,3 @@ function swapCard(){
         deliveryOption.style.display = "none";
     }
 }
-
-
-/*
-function changeCard(){
-    let deliveryOption = document.getElementById("deliveryOpt");
-
-    for (i = 0; i <deliveryOption.length; i++){
-        deliveryOption[i].addEventListener("click", function(){
-            this.classList.toggle("checkout__cards--pickup");
-
-            //toggles between showing and hiding the active panel
-            //let panel = this.nextElementSibling;
-
-            if (deliveryOption.style.display === "flex"){
-                deliveryOption.style.display = "none";
-            } else {
-                deliveryOption.style.display = "flex";
-            }
-        });
-    }
-} */
