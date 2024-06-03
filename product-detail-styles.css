@@ -80,6 +80,7 @@
     height: 225px;
     flex-direction: column;
     position: relative;
+    margin-bottom: 2rem;
 }
 
 .item-details{
@@ -129,7 +130,7 @@
     text-align: left;
     cursor: pointer;
     padding: 20px;
-    width: 487px;
+    width: 490px;
     border: none;
     border-bottom: 2px solid #FFFFFF;
     outline: none;
@@ -202,7 +203,6 @@
 
     .item-container__box{
         width: 100%;
-        gap: 1rem;
     }
 
     .item-container__btns{
