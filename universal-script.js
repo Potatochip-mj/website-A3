@@ -111,10 +111,11 @@ let searchBar;
 document.addEventListener("DOMContentLoaded", function() {
 
     itemsDisplayed = document.querySelectorAll(".item.cluster");
-    searchBar = document.querySelector(".search-bar");
+    searchBarDesktop = document.querySelector(".search-bar--desktop");
+    searchBarIphone = document.querySelector(".search-bar--iphone");
 
     
-    searchBar.addEventListener("input", function(event){
+    searchBarDesktop.addEventListener("input", function(event){
         const userInput = event.target.value.trim().toLowerCase();
         itemsDisplayed.forEach(function(itemDisplayed){
             let itemTitle = itemDisplayed.querySelector('.item-title').innerHTML;
@@ -126,6 +127,17 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     })
 
+    searchBarIphone.addEventListener("input", function(event){
+        const userInput = event.target.value.trim().toLowerCase();
+        itemsDisplayed.forEach(function(itemDisplayed){
+            let itemTitle = itemDisplayed.querySelector('.item-title').innerHTML;
+            if (itemTitle.trim().toLowerCase().includes(userInput)) {
+                itemDisplayed.style.display = 'flex';
+            }else{
+                itemDisplayed.style.display = 'none';
+            }
+        });
+    })
 });
 
 
@@ -135,17 +147,18 @@ document.addEventListener("DOMContentLoaded", function() {
 function showFilters(){
     
     document.querySelector(".no-results-container").style.display = "none";
-    
+    searchIphone = document.querySelector('.filter-bar-search--iphone');
+    searchDesktop = document.querySelector('.filter-bar-search--desktop');
     items = document.querySelector('.items-container');
-    search = document.querySelector('.filter-bar-search');
     sort = document.querySelector('.filter-bar-sort');
     filterButton = document.querySelector('.filter-bar-filter');
     backButton = document.querySelector('.back-button-container');
     filters = document.querySelector('.filters-container');
 
     items.style.display = 'none';
-    search.style.display = 'none';
     sort.style.display = 'none';
+    searchDesktop.style.display = 'none';
+    searchIphone.style.display = 'none';
     filterButton.style.display = 'none';
     backButton.style.display = 'flex';
     filters.style.display = 'flex';
@@ -281,21 +294,25 @@ function showItems(){
         });
     }
 
-
-
+    
+    searchIphone = document.querySelector('.filter-bar-search--iphone');
+    searchDesktop = document.querySelector('.filter-bar-search--desktop');
     items = document.querySelector('.items-container');
-    search = document.querySelector('.filter-bar-search');
     sort = document.querySelector('.filter-bar-sort');
     filterButton = document.querySelector('.filter-bar-filter');
     backButton = document.querySelector('.back-button-container');
     filters = document.querySelector('.filters-container');
 
     items.style.display = 'grid';
-    search.style.display = 'flex';
     sort.style.display = 'flex';
     filterButton.style.display = 'flex';
     backButton.style.display = 'none';
-    filters.style.display = 'none';
+    filters.style.display = 'none';    
+    if(screen.width >= 400){
+        searchDesktop.style.display = "flex";
+    }else{
+        searchIphone.style.display = "flex";
+    }
 
 
 };
