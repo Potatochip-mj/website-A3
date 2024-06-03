@@ -123,6 +123,14 @@ p{  /*this one is for normal text*/
     outline-width: 2px;
 }
 
+.btn--accent-3{
+    background-color: white;
+    color: #9A15EC;
+    outline-style: solid;
+    outline-color: #9A15EC;
+    outline-width: 2px;
+}
+
 /*this is the product-details page quantity button*/
 .quantity-btn--product-detail{
     color:#FFFFFF;

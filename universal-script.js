@@ -330,25 +330,9 @@ function openAccordion(){
             } else {
                 panel.style.display = "block";
             }
-
         });
     }
 }
-
-
-
-/* animated slide down panels
-for (i = 0; i < accordion.length; i++){
-    accordion[i].addEventListener("click", function(){
-        this.classList.toggle("active-accordion");
-        var panel = this.nextElementSibling;
-        if (panel.style.maxHeight){
-            panel.style.maxHeight = null;
-        } else {
-            panel.style.maxHeight = panel.scrollHeight + "px";
-        }
-    });
-} */
 
 
 //Product details page - quantity button
@@ -389,6 +373,7 @@ function minusOne(id){
 function addCart(){
     let addButton = document.getElementById("addBtn");
     addButton.innerHTML = "<a>Added</a>";
+    addButton.classList.replace("btn--primary", "btn--accent-3");
 }
 
 

@@ -90,6 +90,7 @@
     font-family: "Inter";
     font-size: 23px;
     font-weight: bold;
+    width: 490px;
 }
 
 .item-details--price{
@@ -174,11 +175,12 @@
 @media screen and (max-width: 390px){
 
     .item-container__carousel{
-        width: 100%;
+        width: 380px;
+        margin: 0;
     }
 
     .carousel-box{
-        width: 390px;
+        width: 375px;
         height: 350px;
         justify-content: center;
     }
@@ -190,6 +192,10 @@
         justify-items: center;
     }
 
+    .item-details--name{
+        width: 100%;
+    }
+
     .quantity-btn--product-detail{
         margin-top: 2.75rem;
     }
@@ -199,8 +205,12 @@
         gap: 1rem;
     }
 
-    .item-details--name{
-        
+    .item-container__btns{
+        right: 1.25rem;
+    }
+
+    .item-container__btns > .btn{
+        padding: 0.8rem 0.75rem 0.8rem 0.75rem;
     }
 
     .accordion{
